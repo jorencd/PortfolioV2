@@ -6,6 +6,7 @@ import ResumeDL from "../../components/modal/ResumeDL";
 
 function Hero() {
   const [showModal, setShowModal] = useState(false);
+  const [isCoverImageLoading, setIsCoverImageLoading] = useState(true); // For cover photo
 
   const handleResumeClick = () => {
     setShowModal(true);
@@ -26,18 +27,37 @@ function Hero() {
     setShowModal(false);
   };
 
+  // Handle image load events
+  const handleImageLoad = (type) => {
+    if (type === "cover") setIsCoverImageLoading(false);
+  };
+
   return (
     <div className="items-center lg:w-130 lg:items-start flex flex-col gap-y-4 lg:pt-48 pt-40">
       <div className="w-full lg:h-47 h-38 z-0 absolute left-0 top-15">
-        <img src={coverphoto} alt="" className="w-full h-full object-cover" />
+        {/* Skeleton Loader for Cover Photo */}
+        {isCoverImageLoading && (
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-gray-300 animate-pulse"></div>
+        )}
+        <img
+          src={coverphoto}
+          alt="Cover Photo"
+          className="w-full h-full object-cover"
+          loading="lazy"
+          onLoad={() => handleImageLoad("cover")} // Trigger when cover image is loaded
+        />
       </div>
+
       <div className="size-25 z-1 border-4 border-white rounded-full">
         <img
           src={mypicture}
           alt="Jorence"
           className="object-cover rounded-full"
+          loading="lazy"
+          onLoad={() => handleImageLoad("profile")} // Trigger when profile image is loaded
         />
       </div>
+
       <div className="text-center w-full lg:pr-20 lg:text-left">
         <h1 className="font-bold text-2xl mb-1 lg:mb-3 text-neutral-800">
           Jorence Mendoza
