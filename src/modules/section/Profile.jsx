@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import mypicture from "../../assets/profile/mypicture.png";
-import coverphoto from "../../assets/coverphoto/Banner.svg";
+import coverphoto from "../../assets/coverphoto/banner2.svg";
+import ResumeDL from "../../components/modal/ResumeDL";
 
 function Hero() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleResumeClick = () => {
+    setShowModal(true);
+  };
+
+  const handleAccept = () => {
+    setShowModal(false);
+
+    const link = document.createElement("a");
+    link.href = "/Resume/Jorence_Mendoza_Resume.pdf";
+    link.download = "Jorence_Mendoza_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleDecline = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="items-center lg:w-130 lg:items-start flex flex-col gap-y-4 lg:pt-48 pt-40">
       <div className="w-full lg:h-47 h-38 z-0 absolute left-0 top-15">
@@ -17,7 +39,9 @@ function Hero() {
         />
       </div>
       <div className="text-center w-full lg:pr-20 lg:text-left">
-        <h1 className="font-bold text-2xl mb-1 lg:mb-3">Jorence Mendoza</h1>
+        <h1 className="font-bold text-2xl mb-1 lg:mb-3 text-neutral-800">
+          Jorence Mendoza
+        </h1>
         <div className="text-center lg:text-left flex flex-col gap-y-2 text-sm text-neutral-800 mb-2">
           <p className="flex gap-x-1 justify-center lg:justify-start items-center">
             <Icon
@@ -27,7 +51,10 @@ function Hero() {
             Available for Freelance
           </p>
           <p className="flex gap-x-1 justify-center lg:justify-start items-center">
-            <Icon icon="grommet-icons:user-expert" className="size-3 text-neutral-500" />
+            <Icon
+              icon="grommet-icons:user-expert"
+              className="size-3 text-neutral-500"
+            />
             Web & Game Developer
           </p>
           <p className="flex gap-x-1 justify-center lg:justify-start items-center">
@@ -41,12 +68,29 @@ function Hero() {
         </div>
 
         <div className="flex items-center flex-col lg:mt-5 gap-3 justify-center">
-          <button className="bg-blue-600 text-white text-sm py-2 px-3 lg:w-full w-1/2 rounded-2xl font-medium">
+          <button
+            onClick={handleResumeClick}
+            className="bg-blue-600 text-white text-sm py-2 px-3 lg:w-full w-1/2 rounded-2xl font-medium"
+          >
             CV
           </button>
-          <button className="bg-blue-100 text-blue-700 w-1/2 py-2 lg:w-full text-sm rounded-2xl font-medium">
+          {showModal && (
+            <ResumeDL onAccept={handleAccept} onDecline={handleDecline} />
+          )}
+          <a
+            href="mailto:jorencemendoza2@gmail.com?subject=Contact%20from%20Website"
+            className="bg-blue-100 text-center text-blue-700 w-1/2 py-2 lg:w-full text-sm rounded-2xl font-medium"
+          >
             Email
-          </button>
+          </a>
+        </div>
+        <div className="flex flex-col">
+          <p className="text-neutral-600 text-sm font-semibold mt-5 hidden lg:block">About</p>
+          <p className="text-neutral-500 text-sm mt-1 hidden lg:block">
+            a BSIT graduate majoring in Web and Game Development. I’m passionate
+            about creating interactive experiences, whether it’s building
+            websites, developing games, or exploring digital art.
+          </p>
         </div>
       </div>
     </div>

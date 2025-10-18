@@ -28,7 +28,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative text-neutral-800">
       {/* Navbar with conditional styling */}
       <div
         className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-white`}
@@ -52,11 +52,11 @@ function Navbar() {
 
           {/* Desktop menu - Only show on larger screens */}
           {!isMobile && (
-            <ul className="flex space-x-8">
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-              <li>Project</li>
+            <ul className="flex space-x-8 font-semibold">
+              <li className="cursor-pointer">Home</li>
+              <li className="cursor-pointer">About</li>
+              <li className="cursor-pointer">Contact</li>
+              <li className="cursor-pointer">Project</li>
             </ul>
           )}
         </div>
