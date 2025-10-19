@@ -34,7 +34,7 @@ function Hero() {
   };
 
   return (
-    <div className="items-center lg:w-130 lg:items-start flex flex-col gap-y-4 lg:pt-48 pt-40">
+    <div className="items-center lg:w-130 md:w-130 md:items-start lg:items-start flex flex-col gap-y-4 lg:pt-48 pt-40">
       <div className="w-full lg:h-47 h-38 z-0 absolute left-0 top-15">
         {/* Skeleton Loader for Cover Photo */}
         {isCoverImageLoading && (
@@ -59,30 +59,30 @@ function Hero() {
         />
       </div>
 
-      <div className="text-center w-full lg:pr-20 lg:text-left">
-        <h1 className="font-bold text-2xl mb-1 lg:mb-3 text-neutral-800">
+      <div className="text-center w-full lg:pr-20 md:pr-20 lg:text-left">
+        <h1 className="font-bold md:text-left text-2xl mb-1 lg:mb-3 text-neutral-800">
           Jorence Mendoza
         </h1>
-        <div className="text-center lg:text-left flex flex-col gap-y-2 text-sm text-neutral-800 mb-2">
-          <p className="flex gap-x-1 justify-center lg:justify-start items-center">
+        <div className="text-center lg:text-left md:text-left flex flex-col gap-y-2 text-sm text-neutral-800 mb-2">
+          <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon
               icon="material-symbols-light:event-available"
               className="size-3 text-neutral-500"
             />
             Available for Freelance
           </p>
-          <p className="flex gap-x-1 justify-center lg:justify-start items-center">
+          <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon
               icon="grommet-icons:user-expert"
               className="size-3 text-neutral-500"
             />
             Web & Game Developer
           </p>
-          <p className="flex gap-x-1 justify-center lg:justify-start items-center">
+          <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon icon="mdi:contact" className="size-3 text-neutral-500" />
             09123456789
           </p>
-          <p className="flex gap-x-1 justify-center lg:justify-start items-center">
+          <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon icon="picon:address" className="size-3 text-neutral-500" />
             Sampaga, San Antonio, Quezon
           </p>
@@ -91,7 +91,7 @@ function Hero() {
         <div className="flex items-center flex-col lg:mt-5 gap-3 justify-center">
           <button
             onClick={handleResumeClick}
-            className="bg-blue-600 cursor-pointer hover:bg-blue-400 text-white text-sm py-2 px-3 lg:w-full w-1/2 rounded-2xl font-medium"
+            className="bg-blue-600 cursor-pointer hover:bg-blue-400 text-white text-sm py-2 px-3 md:w-full lg:w-full w-1/2 rounded-2xl font-medium"
           >
             CV
           </button>
@@ -100,7 +100,7 @@ function Hero() {
           )}
           <a
             href="mailto:jorencemendoza2@gmail.com?subject=Contact%20from%20Website"
-            className="bg-blue-100 text-center text-blue-700 cursor-pointer hover:bg-blue-200 w-1/2 py-2 lg:w-full text-sm rounded-2xl font-medium"
+            className="bg-blue-100 text-center text-blue-700 cursor-pointer hover:bg-blue-200 w-1/2 py-2 md:w-full lg:w-full text-sm rounded-2xl font-medium"
           >
             Email
           </a>

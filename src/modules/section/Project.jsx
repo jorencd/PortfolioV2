@@ -25,8 +25,8 @@ function Project() {
 
   return (
     <div className="w-full text-sm mb-6">
-      <div className="flex lg:pt-75 rounded border-b border-neutral-200">
-        <ul className="flex font-medium gap-x-5 lg:pt-5">
+      <div className="flex md:pt-65 lg:pt-75 rounded border-b border-neutral-200">
+        <ul className="flex font-medium gap-x-5 md:pt-5 lg:pt-5">
           <li
             className={`cursor-pointer w-full text-center p-2 ${selected === 0 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
             onClick={() => handleClick(0)}
@@ -46,7 +46,7 @@ function Project() {
             Services
           </li>
            <li
-            className={`cursor-pointer text-center p-2 lg:hidden ${selected === 3 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
+            className={`cursor-pointer text-center p-2 md:hidden lg:hidden ${selected === 3 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
             onClick={() => handleClick(3)}
           >
             About
@@ -54,7 +54,7 @@ function Project() {
         </ul>
       </div>
 
-      <div className="items-center w-full lg:mt-3 mt-15">
+      <div className="items-center w-full md:mt-3 lg:mt-3 mt-15">
         {selected === 0 && (
           <div className="mt-3 grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
             {projects.map((project, index) => (

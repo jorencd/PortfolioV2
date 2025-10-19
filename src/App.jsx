@@ -7,9 +7,9 @@ import Footer from './components/footer/Footer'
 function App() {
 
   return (
-   <div className='lg:px-15 px-5 bg-white'>
+   <div className='lg:px-15 md:px-15 px-5 bg-white'>
         <Navbar />
-        <div className='flex flex-col lg:flex-row'>
+        <div className='flex flex-col md:flex-row lg:flex-row'>
         <Profile />
         <Project />
         </div>
