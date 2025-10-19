@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import React, { useState, useEffect } from "react";
+import MyLogo from "../../assets/logo/mylogo.png";
 
 function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -47,7 +48,7 @@ function Navbar() {
 
           {/* Logo */}
           <div>
-            <img src="your-logo.png" alt="Logo" className="h-10" />
+            <img src={MyLogo} alt="Logo" className="h-10 ml-5"  />
           </div>
 
           {/* Desktop menu - Only show on larger screens */}
