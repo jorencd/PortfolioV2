@@ -1,6 +1,7 @@
 import React from "react";
 
-function ServiceCard({ image, title, description, index }) {
+
+function ServiceCard({ image, title, description, index, icon }) {
   return (
     <div className="relative h-55 w-full cursor-pointer"> {/* Adjusted height */}
       <img
@@ -11,12 +12,13 @@ function ServiceCard({ image, title, description, index }) {
       />
       <div className="absolute h-full bottom-0 rounded-lg left-0 right-0 p-4 flex flex-col justify-between">
         <div>
-          <h3 className="text-xl font-semibold text-left text-white">
+          <h3 className="text-xl font-semibold text-left mb-2 text-white">
             {title}
           </h3>
-          <p className="text-xs font-light">{description}</p>
+          <p className="text-xs font-light text-white">{description}</p>
         </div>
-        <div className="mt-auto">
+        <div className="mt-auto flex justify-between items-center text-white">
+          {icon}
           <p className="text-3xl font-light text-end">0{index}</p>
         </div>
       </div>

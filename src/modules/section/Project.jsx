@@ -5,6 +5,7 @@ import ProjectModal from "../../components/modal/ProjectModal";
 import Skills from "../../components/skills/Skills";
 import ServiceCard from "../../components/cards/ServiceCard";
 import { services } from "../../data/ServiceCardData";
+import { Icon } from "@iconify/react";
 
 function Project() {
   const [selected, setSelected] = useState(0);
