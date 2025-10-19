@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import ProjectCard from '../../components/cards/ProjectCard';
-import { projects } from '../../data/ProjectcardData';  // Import the projects data
-import ProjectModal from '../../components/modal/ProjectModal';  // Import the Modal component
-import Skills from '../../components/skills/Skills';  // Import the Skills component
+import React, { useState } from "react";
+import ProjectCard from "../../components/cards/ProjectCard";
+import { projects } from "../../data/ProjectcardData";
+import ProjectModal from "../../components/modal/ProjectModal";
+import Skills from "../../components/skills/Skills";
+import ServiceCard from "../../components/cards/ServiceCard";
+import { services } from "../../data/ServiceCardData";
 
 function Project() {
   const [selected, setSelected] = useState(0);
@@ -28,25 +30,41 @@ function Project() {
       <div className="flex md:pt-65 lg:pt-75 rounded border-b border-neutral-200">
         <ul className="flex font-medium gap-x-5 md:pt-5 lg:pt-5">
           <li
-            className={`cursor-pointer w-full text-center p-2 ${selected === 0 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
+            className={`cursor-pointer w-full text-center p-2 ${
+              selected === 0
+                ? "text-black border-b-2 border-black"
+                : "text-neutral-600"
+            }`}
             onClick={() => handleClick(0)}
           >
             Projects
           </li>
           <li
-            className={`cursor-pointer text-center w-full p-2 ${selected === 1 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
+            className={`cursor-pointer text-center w-full p-2 ${
+              selected === 1
+                ? "text-black border-b-2 border-black"
+                : "text-neutral-600"
+            }`}
             onClick={() => handleClick(1)}
           >
             Tools
           </li>
           <li
-            className={`cursor-pointer text-center p-2 ${selected === 2 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
+            className={`cursor-pointer text-center p-2 ${
+              selected === 2
+                ? "text-black border-b-2 border-black"
+                : "text-neutral-600"
+            }`}
             onClick={() => handleClick(2)}
           >
             Services
           </li>
-           <li
-            className={`cursor-pointer text-center p-2 md:hidden lg:hidden ${selected === 3 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
+          <li
+            className={`cursor-pointer text-center p-2 md:hidden lg:hidden ${
+              selected === 3
+                ? "text-black border-b-2 border-black"
+                : "text-neutral-600"
+            }`}
             onClick={() => handleClick(3)}
           >
             About
@@ -60,20 +78,35 @@ function Project() {
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
-                image={project.images[0]}  // Display the first image
+                image={project.images[0]}
                 title={project.title}
-                onClick={() => openModal(project.images)}  // Trigger modal on click
+                onClick={() => openModal(project.images)}
               />
             ))}
           </div>
         )}
-
-        {/* Render the Skills component when the "Tools" tab is selected */}
-        {selected === 1 && <Skills darkMode={false} />} {/* Adjust the darkMode prop as needed */}
+        {selected === 1 && <Skills />}
+        {selected === 2 && (
+          <div className="mt-5 grid grid-cols-2 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                index={index + 1}
+                image={service.images[0]}
+                title={service.title}
+                description={service.description}
+                icon={service.icon} // Pass the icon here
+              />
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Modal Component */}
-      <ProjectModal isOpen={isModalOpen} images={modalImages} onClose={closeModal} />
+      <ProjectModal
+        isOpen={isModalOpen}
+        images={modalImages}
+        onClose={closeModal}
+      />
     </div>
   );
 }

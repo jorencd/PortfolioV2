@@ -31,7 +31,7 @@ function Navbar() {
     <div className="relative text-neutral-800">
       {/* Navbar with conditional styling */}
       <div
-        className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-white`}
+        className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 shadow-md bg-white`}
       >
         <div className="flex justify-between items-center px-4 py-2">
           {/* Menu Icon - only visible when sidebar is closed on mobile */}
