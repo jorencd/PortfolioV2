@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import mypicture from "../../assets/profile/mypicture.png";
 import coverphoto from "../../assets/coverphoto/banner2.svg";
 import ResumeDL from "../../components/modal/ResumeDL";
+import About from "./About";
 
 function Hero() {
   const [showModal, setShowModal] = useState(false);
@@ -90,7 +91,7 @@ function Hero() {
         <div className="flex items-center flex-col lg:mt-5 gap-3 justify-center">
           <button
             onClick={handleResumeClick}
-            className="bg-blue-600 text-white text-sm py-2 px-3 lg:w-full w-1/2 rounded-2xl font-medium"
+            className="bg-blue-600 cursor-pointer hover:bg-blue-400 text-white text-sm py-2 px-3 lg:w-full w-1/2 rounded-2xl font-medium"
           >
             CV
           </button>
@@ -99,19 +100,12 @@ function Hero() {
           )}
           <a
             href="mailto:jorencemendoza2@gmail.com?subject=Contact%20from%20Website"
-            className="bg-blue-100 text-center text-blue-700 w-1/2 py-2 lg:w-full text-sm rounded-2xl font-medium"
+            className="bg-blue-100 text-center text-blue-700 cursor-pointer hover:bg-blue-200 w-1/2 py-2 lg:w-full text-sm rounded-2xl font-medium"
           >
             Email
           </a>
         </div>
-        <div className="flex flex-col">
-          <p className="text-neutral-600 text-sm font-semibold mt-5 hidden lg:block">About</p>
-          <p className="text-neutral-500 text-sm mt-1 hidden lg:block">
-            a BSIT graduate majoring in Web and Game Development. I’m passionate
-            about creating interactive experiences, whether it’s building
-            websites, developing games, or exploring digital art.
-          </p>
-        </div>
+        <About />
       </div>
     </div>
   );

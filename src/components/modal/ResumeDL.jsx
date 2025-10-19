@@ -17,7 +17,7 @@ function ResumeDL({ onAccept, onDecline }) {
                 Decline
             </button>
             <button
-                className="px-5 py-2 rounded-full bg-[#E3B555] text-white hover:bg-[#eec875] transition"
+                className="px-5 py-2 rounded-full bg-neutral-900 text-white hover:bg-[#eec875] transition"
                 onClick={onAccept}
             >
                 Accept

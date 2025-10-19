@@ -26,7 +26,7 @@ function Project() {
   return (
     <div className="w-full text-sm mb-6">
       <div className="flex lg:pt-75 rounded border-b border-neutral-200">
-        <ul className="flex font-medium gap-x-5 pt-10 lg:pt-5">
+        <ul className="flex font-medium gap-x-5 lg:pt-5">
           <li
             className={`cursor-pointer w-full text-center p-2 ${selected === 0 ? "text-black border-b-2 border-black" : "text-neutral-600"}`}
             onClick={() => handleClick(0)}
@@ -70,7 +70,6 @@ function Project() {
 
         {/* Render the Skills component when the "Tools" tab is selected */}
         {selected === 1 && <Skills darkMode={false} />} {/* Adjust the darkMode prop as needed */}
-
       </div>
 
       {/* Modal Component */}
