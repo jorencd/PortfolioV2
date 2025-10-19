@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className={`absolute left-0 w-full p-10 footer footer-horizontal footer-center text-base-content bg-neutral-900`}>
+    <footer className={`absolute text-white left-0 w-full p-10 footer footer-horizontal footer-center bg-neutral-900`}>
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">Home</a>
         <a className="link link-hover">About</a>
