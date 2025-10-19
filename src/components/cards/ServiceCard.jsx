@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Icon } from "@iconify/react";
 
 function ServiceCard({ image, title, description, index, icon }) {
   return (
@@ -18,7 +18,8 @@ function ServiceCard({ image, title, description, index, icon }) {
           <p className="text-xs font-light text-white">{description}</p>
         </div>
         <div className="mt-auto flex justify-between items-center text-white">
-          {icon}
+          {/* Use the passed icon prop */}
+          <Icon icon={icon} width="30" height="30" className="text-white" />
           <p className="text-3xl font-light text-end">0{index}</p>
         </div>
       </div>
