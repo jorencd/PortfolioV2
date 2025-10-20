@@ -1,8 +1,8 @@
-import bgfullstack from "../assets/servicebg/fullstack.jpg";
-import bgwevdev from "../assets/servicebg/web_dev.jpg";
-import bgwebdsign from "../assets/servicebg/web_design.jpg";
-import bgdigiart from "../assets/servicebg/digi_art.jpg";
-import bggraphic from "../assets/servicebg/graphic_dsign.jpg";
+import bgfullstack from "../assets/servicebg/fullstack.webp";
+import bgwevdev from "../assets/servicebg/web_dev.webp";
+import bgwebdsign from "../assets/servicebg/web_design.webp";
+import bgdigiart from "../assets/servicebg/digi_art.webp";
+import bggraphic from "../assets/servicebg/graphic_dsign.webp";
 
 export const services = [
   {

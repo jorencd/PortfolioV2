@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+body {
+  -webkit-text-size-adjust: 100%; /* For iOS */
+  text-size-adjust: 100%; /* For other browsers */
+}

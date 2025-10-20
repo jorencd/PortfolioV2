@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import mypicture from "../../assets/profile/mypicture.png";
 import coverphoto from "../../assets/coverphoto/banner2.svg";
@@ -8,6 +8,21 @@ import About from "./About";
 function Hero() {
   const [showModal, setShowModal] = useState(false);
   const [isCoverImageLoading, setIsCoverImageLoading] = useState(true); // For cover photo
+  const [skeletonDuration, setSkeletonDuration] = useState(1000); // Default skeleton duration (ms)
+
+  // Adjust skeleton duration based on network speed
+  useEffect(() => {
+    if (navigator.connection) {
+      const { effectiveType } = navigator.connection;
+      if (effectiveType === "4g") {
+        setSkeletonDuration(500); // Fast connection, shorter skeleton
+      } else if (effectiveType === "3g") {
+        setSkeletonDuration(1500); // Moderate connection, moderate skeleton
+      } else {
+        setSkeletonDuration(3000); // Slow connection, longer skeleton
+      }
+    }
+  }, []);
 
   const handleResumeClick = () => {
     setShowModal(true);
@@ -38,7 +53,10 @@ function Hero() {
       <div className="w-full lg:h-47 h-38 z-0 absolute left-0 top-15">
         {/* Skeleton Loader for Cover Photo */}
         {isCoverImageLoading && (
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-gray-300 animate-pulse"></div>
+          <div
+            className="absolute top-0 left-0 right-0 bottom-0 bg-gray-300 animate-pulse"
+            style={{ animationDuration: `${skeletonDuration}ms` }} // Adjust skeleton animation duration based on network speed
+          ></div>
         )}
         <img
           src={coverphoto}
