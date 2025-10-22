@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Icon } from "@iconify/react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -34,11 +34,11 @@ function ServiceCard({ image, title, description, index, icon }) {
   }, []);
 
   // Handle image load
-  const handleImageLoad = () => {
+  const handleImageLoad = useCallback(() => {
     setImageLoaded(true);
     setTextLoaded(true);
     setLoading(false);
-  };
+  }, []);
 
   return (
     <div className="relative h-55 w-full cursor-pointer">
@@ -47,10 +47,10 @@ function ServiceCard({ image, title, description, index, icon }) {
       <React.Suspense fallback={<SkeletonLoader />}>
         <LazyLoadImage
           src={image}
-          alt="Project"
+          alt="Service"
           className="object-cover rounded-lg w-full h-full transition-all duration-300"
           loading="lazy"
-          onLoad={handleImageLoad}
+          onLoad={handleImageLoad} // Trigger when the image is loaded
         />
       </React.Suspense>
 
@@ -84,4 +84,4 @@ function ServiceCard({ image, title, description, index, icon }) {
   );
 }
 
-export default ServiceCard;
+export default React.memo(ServiceCard);

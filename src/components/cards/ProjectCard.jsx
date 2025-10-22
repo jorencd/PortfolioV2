@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 // Skeleton Loader component (defined here)
 function SkeletonLoader() {
@@ -31,9 +31,9 @@ function ProjectCard({ image, title, onClick }) {
   }, []);
 
   // Handle image load
-  const handleImageLoad = () => {
+  const handleImageLoad = useCallback(() => {
     setIsLoading(false); // Set loading to false once the image is loaded
-  };
+  }, []);
 
   return (
     <div className="relative w-full group cursor-pointer" onClick={onClick}>
@@ -72,4 +72,4 @@ function ProjectCard({ image, title, onClick }) {
   );
 }
 
-export default ProjectCard;
+export default React.memo(ProjectCard);
