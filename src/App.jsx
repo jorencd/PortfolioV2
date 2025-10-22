@@ -1,7 +1,6 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import './App.css';
 import { ClipLoader } from 'react-spinners'; // Assuming you're using react-spinners
-import logo from '../../my-app/src/assets/logo/mylogo.png'; // Import your logo image
 
 // Lazy load components
 const Profile = React.lazy(() => import('./modules/section/Profile'));
@@ -63,7 +62,6 @@ function App() {
         fallback={
           <div className="w-full h-screen flex justify-center items-center relative">
             <ClipLoader size={50} color="#4169E1" loading={true} />
-            <img src={logo} alt="Logo" className="absolute z-10" style={{ width: '25px', height: '25px' }} />
           </div>
         }
       >
@@ -79,7 +77,6 @@ function App() {
               ) : (
                 <div>Loading...</div>
               )}
-              <img src={logo} alt="Logo" className="absolute z-10" style={{ width: '40px', height: '40px' }} />
             </div>
           }
         >
@@ -94,7 +91,6 @@ function App() {
               ) : (
                 <div>Loading...</div>
               )}
-              <img src={logo} alt="Logo" className="absolute z-10" style={{ width: '40px', height: '40px' }} />
             </div>
           }
         >
@@ -106,7 +102,6 @@ function App() {
         fallback={
           <div className="w-full h-screen flex justify-center items-center relative">
             <ClipLoader size={50} color="#000" loading={true} />
-            <img src={logo} alt="Logo" className="absolute z-10" style={{ width: '40px', height: '40px' }} />
           </div>
         }
       >
