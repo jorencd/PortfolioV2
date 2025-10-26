@@ -2,14 +2,14 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className={`absolute text-white left-0 w-full p-10 footer footer-horizontal footer-center bg-neutral-900`}>
-      <nav className="grid grid-flow-col gap-4">
+    <footer className={`absolute justify-center text-white left-0 w-full p-10 footer footer-horizontal footer-center bg-neutral-900`}>
+      <nav className="flex gap-x-4 items-center justify-center mb-4">
         <a className="link link-hover">Home</a>
         <a className="link link-hover">About</a>
         <a className="link link-hover">Portfolio</a>
       </nav>
       <nav>
-        <div className="grid grid-flow-col gap-4">
+        <div className="flex gap-x-4 items-center justify-center mb-4">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ function Footer() {
         </div>
       </nav>
       <aside>
-        <p>
+        <p className="text-sm text-center text-white">
           Copyright © {new Date().getFullYear()} - All right reserved by <br /> Jorence Mendoza
         </p>
       </aside>

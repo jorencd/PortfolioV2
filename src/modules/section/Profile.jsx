@@ -62,7 +62,7 @@ function Hero() {
           src={coverphoto}
           alt="Cover Photo"
           className="w-full h-full object-cover"
-          loading="lazy"
+          loading="eager"
           onLoad={() => handleImageLoad("cover")} // Trigger when cover image is loaded
         />
       </div>
@@ -72,7 +72,7 @@ function Hero() {
           src={mypicture}
           alt="Jorence"
           className="object-cover rounded-full"
-          loading="lazy"
+          loading="eager"
           onLoad={() => handleImageLoad("profile")} // Trigger when profile image is loaded
         />
       </div>

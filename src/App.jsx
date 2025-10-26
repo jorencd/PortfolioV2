@@ -6,6 +6,7 @@ import { ClipLoader } from 'react-spinners'; // Assuming you're using react-spin
 const Profile = React.lazy(() => import('./modules/section/Profile'));
 const Navbar = React.lazy(() => import('./components/navbar/Navbar'));
 const Project = React.lazy(() => import('./modules/section/Project'));
+const Contact = React.lazy(() => import('./modules/section/Contact'));
 const Footer = React.lazy(() => import('./components/footer/Footer'));
 
 function App() {
@@ -97,6 +98,16 @@ function App() {
           <Project />
         </Suspense>
       </div>
+
+      <Suspense
+        fallback={
+          <div className="w-full h-screen flex justify-center items-center relative">
+            <ClipLoader size={50} color="#000" loading={true} />
+          </div>
+        }
+      >
+        <Contact />
+      </Suspense>
 
       <Suspense
         fallback={
