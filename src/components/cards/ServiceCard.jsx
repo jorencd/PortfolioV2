@@ -69,9 +69,9 @@ function ServiceCard({ image, title, description, index, icon }) {
         )}
 
         {/* Content */}
-        <div className={`absolute h-full backdrop-blur-xs bg-[#0000007a] bottom-0 rounded-lg left-0 right-0 p-4 flex flex-col justify-between ${imageLoaded ? '' : 'hidden'}`}>
+        <div className={`absolute h-full backdrop-blur-xs bg-[#00000096] bottom-0 rounded-lg left-0 right-0 p-4 flex flex-col justify-between ${imageLoaded ? '' : 'hidden'}`}>
           <div className="text-neutral-200">
-            <h3 className="text-xl font-semibold text-left mb-2">{textLoaded ? title : <SkeletonLoader />}</h3>
+            <h3 className="lg:text-xl md:text-xl text-base font-semibold text-left mb-2">{textLoaded ? title : <SkeletonLoader />}</h3>
             <p className="text-xs font-light">{textLoaded ? description : <SkeletonLoader />}</p>
           </div>
           <div className="mt-auto flex justify-between items-center text-white">

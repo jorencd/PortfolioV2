@@ -11,7 +11,7 @@ function Modal({ isOpen, images, onClose }) {
         </div>
       <div className="relative size-5/6 bg-white rounded overflow-auto">
         
-        <div className="grid grid-cols-1 gap-4 overflow-y-auto h-full">
+        <div className="grid grid-cols-1 gap-4 gap-y-10 overflow-y-auto h-full bg-black/50 p-4">
           {images.map((image, index) => (
             <img key={index} src={image} alt={`Project Image ${index + 1}`} className="object-contain w-full h-full" />
           ))}

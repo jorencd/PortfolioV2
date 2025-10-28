@@ -89,7 +89,7 @@ function Project() {
         )}
         {selected === 1 && <Skills />}
         {selected === 2 && (
-          <div className="grid grid-cols-2 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="mt-5 grid grid-cols-2 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}

@@ -58,7 +58,7 @@ const ProjectCard = ({ image, title, onClick }) => {
         onLoad={handleImageLoad}
       />
 
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+      <div className="absolute rounded-xl bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
         <h3 className="text-lg font-semibold text-left text-white">{title}</h3>
         <p className="text-xs font-light text-white">Jorence Mendoza</p>
       </div>
