@@ -77,7 +77,7 @@ function Hero() {
         />
       </div>
 
-      <div className="text-center w-full lg:pr-20 md:pr-20 lg:text-left">
+      <div className="text-center w-full lg:pr-20 md:pr-20 lg:text-left md:bg-neutral-100 lg:bg-neutral-100 rounded-xl p-5">
         <h1 className="font-bold md:text-left text-2xl mb-1 lg:mb-3 text-neutral-800">
           Jorence Mendoza
         </h1>
@@ -123,7 +123,9 @@ function Hero() {
             Email
           </a>
         </div>
-        <About />
+        <div className="hidden md:block">
+          <About />
+        </div>
       </div>
     </div>
   );

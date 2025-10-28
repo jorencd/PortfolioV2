@@ -6,6 +6,7 @@ import Skills from "../../components/skills/Skills";
 import ServiceCard from "../../components/cards/ServiceCard";
 import { services } from "../../data/ServiceCardData";
 import { Icon } from "@iconify/react";
+import About from "./About";
 
 function Project() {
   const [selected, setSelected] = useState(0);
@@ -73,9 +74,9 @@ function Project() {
         </ul>
       </div>
 
-      <div className="items-center w-full md:mt-3 lg:mt-3 mt-15">
+      <div className="items-center w-full md:mt-3 lg:mt-3">
         {selected === 0 && (
-          <div className="mt-3 grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
+          <div className="mt-18 lg:mt-5 md:mt-5 grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -88,7 +89,7 @@ function Project() {
         )}
         {selected === 1 && <Skills />}
         {selected === 2 && (
-          <div className="mt-5 grid grid-cols-2 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-2 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -99,6 +100,12 @@ function Project() {
                 icon={service.icon} // Pass the icon here
               />
             ))}
+          </div>
+        )}
+
+        {selected === 3 && (
+          <div className="block mt-5 md:hidden lg:hidden">
+            <About />
           </div>
         )}
       </div>

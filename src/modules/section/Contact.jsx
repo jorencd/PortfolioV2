@@ -63,8 +63,8 @@ function Contact() {
   };
 
   return (
-    <div className="my-15 bg-[#f1efef] rounded-xl" id="contact">
-      <div className="max-w-5xl px-4 py-10 mx-auto lg:py-20">
+    <div className="mb-15 mt-10 bg-[#f1efef] rounded-xl" id="contact">
+      <div className="max-w-5xl px-4 py-10 mx-auto lg:py-20 lg:px-10 md:px-10">
         <div className="max-w-3xl mb-10 lg:mb-14">
           <h2 className="text-neutral-700 text-2xl font-semibold md:text-4xl md:leading-tight">
             Get in Touch

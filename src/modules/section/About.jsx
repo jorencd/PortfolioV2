@@ -3,12 +3,12 @@ import { Icon } from "@iconify/react";
 
 function About() {
   return (
-    <div className="mb-10">
+    <div className="lg:mb-10">
       <div className="flex flex-col">
-        <p className="text-neutral-400 text-xs text-left font-bold mt-5 hidden md:block lg:block">
+        <p className="text-neutral-400 text-xs text-left font-bold mt-5 md:block lg:block">
           SOCIALS
         </p>
-        <div className="text-neutral-900 text-sm mt-1 hidden md:block lg:block">
+        <div className="text-neutral-900 text-sm mt-1 md:block lg:block">
           <ul className="border border-neutral-200 rounded-lg gap-y-3">
             <li className="border-b border-neutral-200 p-3 flex justify-between ">
               <div className="flex gap-x-2 font-semibold">
@@ -50,10 +50,10 @@ function About() {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="text-neutral-400 text-xs font-bold mt-5 hidden md:block md:text-left lg:block">
+        <p className="text-neutral-400 w-full text-xs font-bold mt-5 md:block md:text-left lg:block">
           ABOUT ME
         </p>
-        <p className="text-neutral-900 w-50 text-left text-sm mt-1 hidden md:block lg:block">
+        <p className="text-neutral-900 text-left text-sm mt-1 md:block lg:block w-full">
           a BSIT graduate majoring in Web and Game Development. I’m passionate
           about creating interactive experiences, whether it’s building
           websites, developing games, or exploring digital art.

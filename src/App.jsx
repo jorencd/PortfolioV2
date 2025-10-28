@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import './App.css';
-import { ClipLoader } from 'react-spinners'; // Assuming you're using react-spinners
+import { ClipLoader } from 'react-spinners'; 
 
 // Lazy load components
 const Profile = React.lazy(() => import('./modules/section/Profile'));
@@ -11,32 +11,30 @@ const Footer = React.lazy(() => import('./components/footer/Footer'));
 
 function App() {
   const [isSlowNetwork, setIsSlowNetwork] = useState(false);
-  const [isOffline, setIsOffline] = useState(!navigator.onLine); // Check initial online status
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
 
   // Check network speed
   useEffect(() => {
     const updateNetworkStatus = () => {
       const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
       if (connection) {
-        // Assume 'slow-2g' or '2g' indicates a slow network
-        setIsSlowNetwork(connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g');
+        const isSlow = connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g';
+        setIsSlowNetwork(isSlow);
       }
     };
 
-    // Listen for changes in network status
     updateNetworkStatus();
     if (navigator.connection) {
       navigator.connection.addEventListener('change', updateNetworkStatus);
     }
 
-    // Listen for offline/online status
     const handleOffline = () => setIsOffline(true);
     const handleOnline = () => setIsOffline(false);
 
     window.addEventListener('offline', handleOffline);
     window.addEventListener('online', handleOnline);
 
-    // Clean up listeners
+    // Cleanup
     return () => {
       if (navigator.connection) {
         navigator.connection.removeEventListener('change', updateNetworkStatus);
@@ -46,76 +44,50 @@ function App() {
     };
   }, []);
 
-  if (isOffline) {
-    return (
-      <div className="w-full h-screen flex justify-center items-center bg-gray-100 text-neutral-900">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">No Internet Connection</h1>
-          <p>Please check your network settings and try again.</p>
-        </div>
+  const renderFallback = (isSlowNetwork) => (
+    <div className="w-full h-screen flex justify-center items-center relative">
+      {isSlowNetwork ? (
+        <ClipLoader size={50} color="#000" loading={true} />
+      ) : (
+        <div>Loading...</div>
+      )}
+    </div>
+  );
+
+  const renderOfflineMessage = () => (
+    <div className="w-full h-screen flex justify-center items-center bg-gray-100 text-neutral-900">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">No Internet Connection</h1>
+        <p>Please check your network settings and try again.</p>
       </div>
-    );
-  }
+    </div>
+  );
+
+  if (isOffline) return renderOfflineMessage();
 
   return (
     <div className="lg:px-15 md:px-15 px-5 bg-white">
-      <Suspense
-        fallback={
-          <div className="w-full h-screen flex justify-center items-center relative">
-            <ClipLoader size={50} color="#4169E1" loading={true} />
-          </div>
-        }
-      >
+      <Suspense fallback={renderFallback(isSlowNetwork)}>
         <Navbar />
       </Suspense>
 
-      <div className="flex flex-col md:flex-row lg:flex-row">
-        <Suspense
-          fallback={
-            <div className="w-full h-screen flex justify-center items-center relative">
-              {isSlowNetwork ? (
-                <ClipLoader size={50} color="#000" loading={true} />
-              ) : (
-                <div>Loading...</div>
-              )}
-            </div>
-          }
-        >
+      <div className="flex flex-col md:flex-row lg:flex-row gap-x-5">
+        <Suspense fallback={renderFallback(isSlowNetwork)}>
           <Profile />
         </Suspense>
 
-        <Suspense
-          fallback={
-            <div className="w-full h-screen flex justify-center items-center relative">
-              {isSlowNetwork ? (
-                <ClipLoader size={50} color="#000" loading={true} />
-              ) : (
-                <div>Loading...</div>
-              )}
-            </div>
-          }
-        >
+        <Suspense fallback={renderFallback(isSlowNetwork)}>
           <Project />
         </Suspense>
       </div>
 
-      <Suspense
-        fallback={
-          <div className="w-full h-screen flex justify-center items-center relative">
-            <ClipLoader size={50} color="#000" loading={true} />
-          </div>
-        }
-      >
+      <hr className="my-10 border-gray-300" />
+
+      <Suspense fallback={renderFallback(isSlowNetwork)}>
         <Contact />
       </Suspense>
 
-      <Suspense
-        fallback={
-          <div className="w-full h-screen flex justify-center items-center relative">
-            <ClipLoader size={50} color="#000" loading={true} />
-          </div>
-        }
-      >
+      <Suspense fallback={renderFallback(isSlowNetwork)}>
         <Footer />
       </Suspense>
     </div>
