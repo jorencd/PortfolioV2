@@ -12,8 +12,6 @@ function Navbar() {
 
   // Check if window is resized or if user is scrolling
   useEffect(() => {
-   
-
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); // Mobile check
     };
@@ -32,7 +30,7 @@ function Navbar() {
     <div className="relative text-neutral-800">
       {/* Navbar with conditional styling */}
       <div
-        className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 shadow-md bg-white`}
+        className={`fixed top-0 left-0 right-0 z-50 lg:z-20 md:z-20 transition-all duration-300 shadow-md bg-white`}
       >
         <div className="flex justify-between items-center px-4 py-2">
           {/* Menu Icon - only visible when sidebar is closed on mobile */}
@@ -46,9 +44,9 @@ function Navbar() {
             </div>
           )}
 
-          {/* Logo */}
-          <div>
-            <img src={MyLogo} alt="Logo" className="h-10 ml-5"  />
+          {/* Logo - Always aligned to the right in mobile view */}
+          <div className={`${isMobile ? "ml-auto" : ""}`}>
+            <img src={MyLogo} alt="Logo" className="h-10" />
           </div>
 
           {/* Desktop menu - Only show on larger screens */}
@@ -63,11 +61,22 @@ function Navbar() {
         </div>
       </div>
 
+      {/* Background overlay for mobile */}
+      {sidebarOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black/75 bg-opacity-75 z-50">
+          {/* Optional: You can add a click handler here to close the sidebar when clicking on the overlay */}
+          <div
+            className="w-full h-full"
+            onClick={toggleSidebar}
+          ></div>
+        </div>
+      )}
+
       {/* Sidebar for mobile */}
       <div
         className={`fixed top-0 left-0 h-full bg-white transition-all duration-300 ${
           sidebarOpen ? "w-3/5 lg:w-1/5" : "w-0"
-        } overflow-hidden z-30`}
+        } overflow-hidden z-50`}
       >
         {/* Close Button */}
         <div className="absolute top-4 right-4 z-30">

@@ -7,19 +7,18 @@ import About from "./About";
 
 function Hero() {
   const [showModal, setShowModal] = useState(false);
-  const [isCoverImageLoading, setIsCoverImageLoading] = useState(true); // For cover photo
-  const [skeletonDuration, setSkeletonDuration] = useState(1000); // Default skeleton duration (ms)
+  const [isCoverImageLoading, setIsCoverImageLoading] = useState(true);
+  const [skeletonDuration, setSkeletonDuration] = useState(1000);
 
-  // Adjust skeleton duration based on network speed
   useEffect(() => {
     if (navigator.connection) {
       const { effectiveType } = navigator.connection;
       if (effectiveType === "4g") {
-        setSkeletonDuration(500); // Fast connection, shorter skeleton
+        setSkeletonDuration(500);
       } else if (effectiveType === "3g") {
-        setSkeletonDuration(1500); // Moderate connection, moderate skeleton
+        setSkeletonDuration(1500);
       } else {
-        setSkeletonDuration(3000); // Slow connection, longer skeleton
+        setSkeletonDuration(3000);
       }
     }
   }, []);
