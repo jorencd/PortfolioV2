@@ -97,7 +97,7 @@ function Hero() {
           </p>
           <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon icon="mdi:contact" className="size-3 text-neutral-500" />
-            09123456789
+            +63 993 534 7826
           </p>
           <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon icon="picon:address" className="size-3 text-neutral-500" />
