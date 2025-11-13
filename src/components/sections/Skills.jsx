@@ -1,4 +1,4 @@
-import Techstack from "../techstack/Techstack";
+import Techstack from "../sections/Techstack";
 import { Icon } from "@iconify/react";
 
 function Skills() {

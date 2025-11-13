@@ -1,44 +1,26 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import useImageLoad from "../../../hooks/useServiceCard";
+import useSkeletonDuration from "../../../hooks/useServiceCardSkel";  
 
-// Skeleton loader component (defined here)
-function SkeletonLoader() {
-  return (
-    <div className="w-full h-full bg-gray-300 animate-pulse rounded-lg"></div>
-  );
-}
+// Skeleton loader component
+const SkeletonLoader = () => (
+  <div className="w-full h-full bg-gray-300 animate-pulse rounded-lg"></div>
+);
 
 // Loading spinner component
-function LoadingSpinner() {
-  return (
-    <div className="w-full h-full flex items-center justify-center">
-      <div className="border-t-4 border-blue-500 border-solid w-12 h-12 rounded-full animate-spin"></div>
-    </div>
-  );
-}
+const LoadingSpinner = () => (
+  <div className="w-full h-full flex items-center justify-center">
+    <div className="border-t-4 border-blue-500 border-solid w-12 h-12 rounded-full animate-spin"></div>
+  </div>
+);
 
 // ServiceCard component
-function ServiceCard({ image, title, description, index, icon }) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [textLoaded, setTextLoaded] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [skeletonDuration, setSkeletonDuration] = useState(1000);
-
-  // Adjust skeleton duration based on network speed
-  useEffect(() => {
-    if (navigator.connection) {
-      const { effectiveType } = navigator.connection;
-      setSkeletonDuration(effectiveType === "4g" ? 500 : effectiveType === "3g" ? 1500 : 3000);
-    }
-  }, []);
-
-  // Handle image load
-  const handleImageLoad = useCallback(() => {
-    setImageLoaded(true);
-    setTextLoaded(true);
-    setLoading(false);
-  }, []);
+const ServiceCard = ({ image, title, description, index, icon }) => {
+  // Using the custom hooks
+  const { imageLoaded, textLoaded, loading, handleImageLoad } = useImageLoad();
+  const skeletonDuration = useSkeletonDuration();
 
   return (
     <div className="relative h-55 w-full cursor-pointer">
@@ -50,7 +32,7 @@ function ServiceCard({ image, title, description, index, icon }) {
           alt="Service"
           className="object-cover rounded-lg w-full h-full transition-all duration-300"
           loading="lazy"
-          onLoad={handleImageLoad} // Trigger when the image is loaded
+          onLoad={handleImageLoad}
         />
       </React.Suspense>
 
@@ -82,6 +64,6 @@ function ServiceCard({ image, title, description, index, icon }) {
       </div>
     </div>
   );
-}
+};
 
 export default React.memo(ServiceCard);

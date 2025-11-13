@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ProjectCard from "../../components/cards/ProjectCard";
+import ProjectCard from "../common/cards/ProjectCard";
 import { projects } from "../../data/ProjectcardData";
-import ProjectModal from "../../components/modal/ProjectModal";
-import Skills from "../../components/skills/Skills";
-import ServiceCard from "../../components/cards/ServiceCard";
+import ProjectModal from "../common/modal/ProjectModal";
+import Skills from "../sections/Skills";
+import ServiceCard from "../common/cards/ServiceCard";
 import { services } from "../../data/ServiceCardData";
 import { Icon } from "@iconify/react";
 import About from "./About";
@@ -97,7 +97,7 @@ function Project() {
                 image={service.images[0]}
                 title={service.title}
                 description={service.description}
-                icon={service.icon} // Pass the icon here
+                icon={service.icon}
               />
             ))}
           </div>

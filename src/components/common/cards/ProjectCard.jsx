@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 
-// Skeleton loader component
 const SkeletonLoader = () => (
   <div className="w-full h-full bg-gray-300 animate-pulse rounded-lg"></div>
 );
 
-// Loading Spinner component
 const LoadingSpinner = () => (
   <div className="w-full h-full flex items-center justify-center">
     <div className="border-t-4 border-blue-500 border-solid w-12 h-12 rounded-full animate-spin"></div>
   </div>
 );
 
-// ProjectCard component
 const ProjectCard = ({ image, title, onClick }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
@@ -22,7 +19,6 @@ const ProjectCard = ({ image, title, onClick }) => {
 
   return (
     <div className="relative w-full group cursor-pointer" onClick={onClick}>
-      {/* Show skeleton loader until the image is loaded */}
       {!isImageLoaded && <SkeletonLoader />}
 
       <img
@@ -30,10 +26,8 @@ const ProjectCard = ({ image, title, onClick }) => {
         alt="Project"
         className="object-cover rounded-lg w-full h-full transition-all duration-300"
         loading="eager"
-        onLoad={handleImageLoad} // Trigger when the image is loaded
+        onLoad={handleImageLoad}
       />
-
-      {/* Only show overlay if image is loaded */}
       {isImageLoaded && (
         <div className="absolute rounded-xl bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent lg:opacity-0 md:opacity-0 group-hover:opacity-100 transition-all duration-300">
           <h3 className="text-lg font-semibold text-left text-white">{title}</h3>

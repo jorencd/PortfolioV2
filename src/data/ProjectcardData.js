@@ -1,16 +1,16 @@
-import sanhs1 from '../assets/projectphoto/login.webp';
-import sanhs2 from '../assets/projectphoto/dashboard.webp';
-import sanhs3 from '../assets/projectphoto/table.webp';
+import sanhs1 from '../assets/images/projectphoto/login.webp';
+import sanhs2 from '../assets/images/projectphoto/dashboard.webp';
+import sanhs3 from '../assets/images/projectphoto/table.webp';
 
-import interlux1 from '../assets/projectphoto/interlogin.webp';
-import interlux2 from '../assets/projectphoto/landing.webp';
-import interlux3 from '../assets/projectphoto/product.webp';
+import interlux1 from '../assets/images/projectphoto/interlogin.webp';
+import interlux2 from '../assets/images/projectphoto/landing.webp';
+import interlux3 from '../assets/images/projectphoto/product.webp';
 
-import portfolio1 from '../assets/projectphoto/portfolio1.webp';
-import portfolio2 from '../assets/projectphoto/portfolio2.webp';
+import portfolio1 from '../assets/images/projectphoto/portfolio1.webp';
+import portfolio2 from '../assets/images/projectphoto/portfolio2.webp';
 
-import hotel1 from '../assets/projectphoto/hotel1.png';
-import hotel2 from '../assets/projectphoto/hotel2.png';
+import hotel1 from '../assets/images/projectphoto/hotel1.png';
+import hotel2 from '../assets/images/projectphoto/hotel2.png';
 
 
 export const projects = [

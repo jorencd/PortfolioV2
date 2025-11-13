@@ -8,9 +8,9 @@ function Contact() {
     message: "",
   });
 
-  const [success, setSuccess] = useState(false); // Success alert state
-  const [error, setError] = useState(false); // Error alert state
-  const [loading, setLoading] = useState(false); // Loading state
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false); 
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -23,7 +23,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setLoading(true); // Show loading spinner
+    setLoading(true);
 
     const { name, email, message } = formData;
 
@@ -43,16 +43,16 @@ function Contact() {
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
-          setSuccess(true); // Show success alert
-          setError(false); // Hide error alert
-          setLoading(false); // Hide loading spinner
-          setFormData({ name: "", email: "", message: "" }); // Clear the form
+          setSuccess(true); 
+          setError(false);
+          setLoading(false); 
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.error("Error sending email:", error);
-          setSuccess(false); // Hide success alert
-          setError(true); // Show error alert
-          setLoading(false); // Hide loading spinner
+          setSuccess(false); 
+          setError(true); 
+          setLoading(false); 
         }
       );
   };

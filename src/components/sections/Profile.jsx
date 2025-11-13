@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
-import mypicture from "../../assets/profile/mypicture.png";
-import coverphoto from "../../assets/coverphoto/banner2.svg";
-import ResumeDL from "../../components/modal/ResumeDL";
+import mypicture from "../../assets/images/profile/mypicture.png";
+import coverphoto from "../../assets/images/coverphoto/banner2.svg";
+import ResumeDL from "../common/modal/ResumeDL";
 import About from "./About";
 
 function Hero() {
@@ -54,7 +54,7 @@ function Hero() {
         {isCoverImageLoading && (
           <div
             className="absolute top-0 left-0 right-0 bottom-0 bg-gray-300 animate-pulse"
-            style={{ animationDuration: `${skeletonDuration}ms` }} // Adjust skeleton animation duration based on network speed
+            style={{ animationDuration: `${skeletonDuration}ms` }}
           ></div>
         )}
         <img
@@ -62,7 +62,7 @@ function Hero() {
           alt="Cover Photo"
           className="w-full h-full object-cover"
           loading="eager"
-          onLoad={() => handleImageLoad("cover")} // Trigger when cover image is loaded
+          onLoad={() => handleImageLoad("cover")}
         />
       </div>
 
@@ -72,7 +72,7 @@ function Hero() {
           alt="Jorence"
           className="object-cover rounded-full"
           loading="eager"
-          onLoad={() => handleImageLoad("profile")} // Trigger when profile image is loaded
+          onLoad={() => handleImageLoad("profile")}
         />
       </div>
 
