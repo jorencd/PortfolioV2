@@ -1,5 +1,7 @@
+// Home.jsx
 import React, { Suspense, useEffect, useState } from 'react';
 import { ClipLoader } from 'react-spinners'; 
+import LoadingFallback from '../../components/common/loadingfallback/LoadingFallback';  
 
 const Profile = React.lazy(() => import('../../components/sections/Profile'));
 const Navbar = React.lazy(() => import('../../components/layout/navbar/Navbar'));
@@ -49,12 +51,6 @@ function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  const renderFallback = () => (
-    <div className="w-full h-screen flex justify-center items-center relative">
-      <ClipLoader size={50} color="#000" loading={true} />
-    </div>
-  );
-
   const renderOfflineMessage = () => (
     <div className="w-full h-screen flex justify-center items-center bg-gray-100 text-neutral-900">
       <div className="text-center">
@@ -76,27 +72,27 @@ function Home() {
 
   return (
     <div className="lg:px-15 md:px-15 px-5 bg-white">
-      <Suspense fallback={renderFallback(isSlowNetwork)}>
+      <Suspense fallback={<LoadingFallback isSlowNetwork={isSlowNetwork} />}>
         <Navbar />
       </Suspense>
 
       <div className="flex flex-col md:flex-row lg:flex-row gap-x-5">
-        <Suspense fallback={renderFallback(isSlowNetwork)}>
+        <Suspense fallback={<LoadingFallback isSlowNetwork={isSlowNetwork} />}>
           <Profile />
         </Suspense>
 
-        <Suspense fallback={renderFallback(isSlowNetwork)}>
+        <Suspense fallback={<LoadingFallback isSlowNetwork={isSlowNetwork} />}>
           <Project />
         </Suspense>
       </div>
 
       <hr className="my-10 border-gray-300" />
 
-      <Suspense fallback={renderFallback(isSlowNetwork)}>
+      <Suspense fallback={<LoadingFallback isSlowNetwork={isSlowNetwork} />}>
         <Contact />
       </Suspense>
 
-      <Suspense fallback={renderFallback(isSlowNetwork)}>
+      <Suspense fallback={<LoadingFallback isSlowNetwork={isSlowNetwork} />}>
         <Footer />
       </Suspense>
     </div>

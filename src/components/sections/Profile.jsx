@@ -5,7 +5,7 @@ import coverphoto from "../../assets/images/coverphoto/banner2.svg";
 import ResumeDL from "../common/modal/ResumeDL";
 import About from "./About";
 
-function Hero() {
+function Profile() {
   const [showModal, setShowModal] = useState(false);
   const [isCoverImageLoading, setIsCoverImageLoading] = useState(true);
   const [skeletonDuration, setSkeletonDuration] = useState(1000);
@@ -130,4 +130,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Profile;

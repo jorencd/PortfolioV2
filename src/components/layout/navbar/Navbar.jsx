@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import MyLogo from "../../../assets/images/logo/mylogo.png";
 import useMobileCheck from "../../../hooks/useNav";
 
@@ -26,8 +27,12 @@ const Navbar = () => {
 
           {!isMobile && (
             <ul className="flex space-x-8 font-semibold">
-              <li className="cursor-pointer">Home</li>
-              <li className="cursor-pointer">About</li>
+              <li className="cursor-pointer">
+                <Link to="/" className="cursor-pointer">Home</Link>
+              </li>
+              <li>
+                <Link to="/certificates" className="cursor-pointer">Certificates</Link>
+              </li>
               <li className="cursor-pointer">Contact</li>
               <li className="cursor-pointer">Project</li>
             </ul>
@@ -53,8 +58,12 @@ const Navbar = () => {
           />
         </div>
         <ul className="p-4">
-          <li className="mb-4">Home</li>
-          <li className="mb-4">About</li>
+          <li className="mb-4">
+            <Link to="/" className="cursor-pointer">Home</Link>
+          </li>
+          <li className="mb-4">
+            <Link to="/certificates" className="cursor-pointer">Certificates</Link>
+          </li>
           <li className="mb-4">Contact</li>
           <li className="mb-4">Project</li>
         </ul>
