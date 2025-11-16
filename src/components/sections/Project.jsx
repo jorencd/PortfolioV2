@@ -11,20 +11,20 @@ import About from "./About";
 function Project() {
   const [selected, setSelected] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImages, setModalImages] = useState([]);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const handleClick = (index) => {
     setSelected(index);
   };
 
-  const openModal = (projectImages) => {
-    setModalImages(projectImages);
+  const openModal = (project) => {
+    setSelectedProject(project);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalImages([]);
+    setSelectedProject(null);
   };
 
   return (
@@ -82,7 +82,8 @@ function Project() {
                 key={index}
                 image={project.images[0]}
                 title={project.title}
-                onClick={() => openModal(project.images)}
+                url={project.url}
+                onClick={() => openModal(project)}
               />
             ))}
           </div>
@@ -112,7 +113,7 @@ function Project() {
 
       <ProjectModal
         isOpen={isModalOpen}
-        images={modalImages}
+        project={selectedProject}
         onClose={closeModal}
       />
     </div>
