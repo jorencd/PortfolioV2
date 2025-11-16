@@ -125,7 +125,7 @@ function ModalDescription({ project }) {
             <span>{project.technologies.join(" + ")}</span>
           </div>
         </div>
-        <div>
+        <div className="w-full lg:w-1/3 md:w-1/3">
           <div className="flex flex-col gap-1 justify-center items-start w-full bg-white dark:bg-transparent px-4 py-4 shadow-xl rounded-lg">
             <p className="font-semibold text-xl text-gray-600 mb-2">Tools</p>
             <div className="flex flex-wrap gap-2">
