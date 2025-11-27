@@ -21,5 +21,15 @@ export const certificates = [
     description: "It covers topics like Design Patterns, Memory management, concurrency model, and event loops, among others.",
     date: "Nov 2025",
     credentialsLink: "https://www.hackerrank.com/certificates/iframe/258ec43cb7d8"
+  },
+  {
+    id: 2,
+    image: images2,
+    companyname: "Hackerrank",
+    category: "Back End Development",
+    certname: "SQL (Advanced)",
+    description: "It covers topics like query optimization, data modeling, Indexing, window functions, and pivots in SQL.",
+    date: "Nov 2025",
+    credentialsLink: "https://www.hackerrank.com/certificates/iframe/43d198e73fb9"
   }
 ];

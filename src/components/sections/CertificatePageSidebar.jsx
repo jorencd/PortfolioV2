@@ -5,7 +5,7 @@ function CertificatePageSidebar({ selectedCategory, onCategoryChange }) {
   const categories = [
     "All",
     "Web Development",
-    "Game Development",
+    "Back End Development",
     "UI/UX Design",
   ];
 
