@@ -23,7 +23,7 @@ const ServiceCard = ({ image, title, description, index, icon }) => {
   const skeletonDuration = useSkeletonDuration();
 
   return (
-    <div className="relative h-55 w-full cursor-pointer">
+    <div className="relative h-55 w-full">
       <link rel="preload" href={image} as="image" />
 
       <React.Suspense fallback={<SkeletonLoader />}>
