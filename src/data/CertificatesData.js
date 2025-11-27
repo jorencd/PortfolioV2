@@ -1,67 +1,25 @@
-import images1 from "../assets/images/coverphoto/banner2.svg";
+import images1 from "../assets/images/certimages/codecamp.jpg";
+import images2 from "../assets/images/certimages/hackerrank.avif"
 
 export const certificates = [
   {
     id: 1,
     image: images1,
-    companyname: "Hackerrank",
+    companyname: "Freecodecamp",
     category: "Web Development",
-    certname: "Web Development Certificate",
-    description: "Completed a comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.",
-    date: "Jan 2023",
+    certname: "Front End Development Libraries V8",
+    description: "Completed a comprehensive certification focusing on the essential front-end libraries used in modern web development.",
+    date: "Nov 2025",
+    credentialsLink: "https://www.freecodecamp.org/certification/fcc-0a4b8ac7-ae0d-4b92-a964-d96d29d218c7/front-end-development-libraries"
   },
   {
     id: 2,
-    image: images1,
-    companyname: "Game Development Certificate",
-    category: "Game Development",
-    certname: "Web Development Certificate",
-    description: "Completed a comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.",
-    date: "Jan 2023",
-  },
-  {
-    id: 3,
-    image: images1,
-    companyname: "UI/UX Design Certificate",
-    category: "UI/UX Design",
-    certname: "Web Development Certificate",
-    description: "Completed a comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.",
-    date: "Jan 2023",
-  },
-  {
-    id: 4,
-    image: images1,
-    companyname: "Full Stack Web Development",
+    image: images2,
+    companyname: "Hackerrank",
     category: "Web Development",
-    certname: "Web Development Certificate",
-    description: "Completed a comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.",
-    date: "Jan 2023",
-  },
-  {
-    id: 5,
-    image: images1,
-    companyname: "UI/UX Design Certificate",
-    category: "UI/UX Design",
-    certname: "Web Development Certificate",
-    description: "Completed a comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.",
-    date: "Jan 2023",
-  },
-  {
-    id: 6,
-    image: images1,
-    companyname: "Full Stack Web Development",
-    category: "Web Development",
-    certname: "Web Development Certificate",
-    description: "Completed a comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.",
-    date: "Jan 2023",
-  },
-  {
-    id: 7,
-    image: images1,
-    companyname: "Full Stack Web Development",
-    category: "Web Development",
-    certname: "Web Development Certificate",
-    description: "Completed a comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.",
-    date: "Jan 2023",
-  },
+    certname: "JavaScript (Intermediate)",
+    description: "It covers topics like Design Patterns, Memory management, concurrency model, and event loops, among others.",
+    date: "Nov 2025",
+    credentialsLink: "https://www.hackerrank.com/certificates/iframe/258ec43cb7d8"
+  }
 ];

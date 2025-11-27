@@ -3,7 +3,7 @@ import { ClipLoader } from "react-spinners";
 import coverphoto from "../../assets/images/coverphoto/banner3.svg";
 import CertificateSidebar from "./CertificatePageSidebar"; // Import the new sidebar
 import CertificatesCard from "../common/cards/CertificatesCard";
-import { certificates } from "../../data/CertificatesData" // Assuming you have a card component for displaying certificates
+import { certificates } from "../../data/CertificatesData"
 
 function Certificates() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -65,7 +65,9 @@ function Certificates() {
       {/* Display filtered certificates */}
       <div className="grid p-5 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 lg:mt-17 md:mt-17">
         {filteredCertificates.map((certificate) => (
-          <CertificatesCard key={certificate.id} certificate={certificate} />
+          <CertificatesCard 
+          key={certificate.id} 
+          certificate={certificate} />
         ))}
       </div>
     </div>
