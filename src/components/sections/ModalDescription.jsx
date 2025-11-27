@@ -26,7 +26,7 @@ function ModalDescription({ project }) {
   if (!project) return null;
 
   return (
-    <div className="lg:h-full w-full lg:p-4 md:p-4">
+    <div className="lg:h-full w-full px-4 mt-2">
       <div className="bg-white h-full w-full flex flex-col lg:flex-row md:flex-row gap-4 items-center lg:justify-center md:justify-center p-4">
         <div className="lg:w-1/2 md:w-1/2 w-full border border-neutral-200 p-6 rounded-lg space-y-4">
           <div className="flex items-center justify-between">

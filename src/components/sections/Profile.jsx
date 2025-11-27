@@ -4,6 +4,7 @@ import mypicture from "../../assets/images/profile/mypicture.png";
 import coverphoto from "../../assets/images/coverphoto/banner2.svg";
 import ResumeDL from "../common/modal/ResumeDL";
 import About from "./About";
+import CvButton from "../common/button/CvButton";  // Import the reusable button
 
 function Profile() {
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +30,6 @@ function Profile() {
 
   const handleAccept = () => {
     setShowModal(false);
-
     const link = document.createElement("a");
     link.href = "/Resume/Jorence_Mendoza_Resume.pdf";
     link.download = "Jorence_Mendoza_Resume.pdf";
@@ -42,7 +42,6 @@ function Profile() {
     setShowModal(false);
   };
 
-  // Handle image load events
   const handleImageLoad = (type) => {
     if (type === "cover") setIsCoverImageLoading(false);
   };
@@ -50,7 +49,6 @@ function Profile() {
   return (
     <div className="items-center lg:w-130 md:w-130 md:items-start lg:items-start flex flex-col gap-y-4 lg:pt-48 pt-40">
       <div className="w-full lg:h-47 h-38 z-0 absolute left-0 top-15">
-        {/* Skeleton Loader for Cover Photo */}
         {isCoverImageLoading && (
           <div
             className="absolute top-0 left-0 right-0 bottom-0 bg-gray-300 animate-pulse"
@@ -82,17 +80,11 @@ function Profile() {
         </h1>
         <div className="text-center lg:text-left md:text-left flex flex-col gap-y-2 text-sm text-neutral-800 mb-2">
           <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
-            <Icon
-              icon="material-symbols-light:event-available"
-              className="size-3 text-neutral-500"
-            />
+            <Icon icon="material-symbols-light:event-available" className="size-3 text-neutral-500" />
             Available for Freelance
           </p>
           <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
-            <Icon
-              icon="grommet-icons:user-expert"
-              className="size-3 text-neutral-500"
-            />
+            <Icon icon="grommet-icons:user-expert" className="size-3 text-neutral-500" />
             Web & Game Developer
           </p>
           <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
@@ -106,12 +98,8 @@ function Profile() {
         </div>
 
         <div className="flex items-center flex-col lg:mt-5 gap-3 justify-center">
-          <button
-            onClick={handleResumeClick}
-            className="bg-blue-600 cursor-pointer hover:bg-blue-400 text-white text-sm py-2 px-3 md:w-full lg:w-full w-1/2 rounded-2xl font-medium"
-          >
-            CV
-          </button>
+          {/* Use the reusable CvButton component */}
+          <CvButton onClick={handleResumeClick} text="CV" />
           {showModal && (
             <ResumeDL onAccept={handleAccept} onDecline={handleDecline} />
           )}

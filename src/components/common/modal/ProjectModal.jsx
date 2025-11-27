@@ -25,18 +25,18 @@ function Modal({ isOpen, project, onClose }) {
       >
         &times;
       </div>
-      <div className="relative pt-12 h-full w-full lg:p-10 md:p-10 rounded overflow-auto bg-white lg:bg-transparent md:bg-transparent">
+      <div className="relative pt-12 h-full w-full lg:p-10 md:p-10 rounded overflow-auto bg-transparent bg-black/75 bg-opacity-75 lg:bg-transparent md:bg-transparent">
         <div className="px-4 py-6 lg:py-0 md:py-0 flex items-center gap-x-4">
           <div>
-            <h2 className="lg:text-white md:text-white font-semibold text-md">
+            <h2 className="text-white font-semibold text-md">
               {project.title}
             </h2>
-            <p className="lg:text-white md:text-white font-light text-xs">
+            <p className="text-white font-light text-xs">
               Jorence Mendoza
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:gap-y-2 md:gap-y-2 overflow-y-auto w-full lg:p-4 md:p-4">
+        <div className="grid grid-cols-1 gap-y-2 overflow-y-auto w-full lg:p-4 md:p-4 px-5">
           {project.images.map((image, index) => (
             <div key={index} className="relative w-full h-full group">
               <a
