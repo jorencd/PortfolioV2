@@ -5,7 +5,7 @@ import { works } from '../../../data/WorkCardData';
 function Work() {
   return (
     <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <div className="lg:grid md:grid flex flex-col items-center md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
         {works.map((works) => (
           <WorkCard 
             key={works.id}

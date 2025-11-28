@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 
 function WorkNav() {
   return (
-    <div className='mt-20 mb-10 gap-5 flex items-center justify-center'>
+    <div className='mt-20 mb-5 gap-5 flex items-center justify-center'>
         <div className='py-1 px-4 border flex border-neutral-300 rounded-full text-neutral-600 gap-2 cursor-pointer items-center'>
             <Icon icon="lets-icons:filter" width="17" height="17" />
             <p className='hidden md:block lg:block'>Filter</p>

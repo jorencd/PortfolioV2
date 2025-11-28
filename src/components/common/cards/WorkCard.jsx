@@ -2,14 +2,13 @@ import React from "react";
 
 function WorkCard({ title, image, tech }) {
   return (
-    <div>
-      <div className="group  mt-4 w-full bg-white rounded overflow-hidden transition-all duration-300 cursor-pointer mx-2 border border-gray-200">
-        {/* Image Container with fixed height */}
+    <div className="w-full">
+      <div className="group mt-4 bg-white rounded overflow-hidden transition-all duration-300 cursor-pointer mx-2 border border-gray-200">
         <div className="h-78 overflow-hidden">
           <img
             src={image}
             alt="Project"
-            className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
+            className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110"
             loading="eager"
           />
         </div>

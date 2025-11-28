@@ -7,7 +7,7 @@ function WorkCateg() {
   return (
     <div className="work-categories">
       {/* Desktop View - Grid Layout */}
-      <div className="hidden md:flex lg:flex gap-6">
+      <div className="hidden md:flex lg:flex">
         {workCategories.map((category) => (
           <WorkCategCard 
             key={category.id}
