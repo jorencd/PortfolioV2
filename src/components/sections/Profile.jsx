@@ -47,7 +47,7 @@ function Profile() {
   };
 
   return (
-    <div className="items-center lg:w-130 md:w-130 md:items-start lg:items-start flex flex-col gap-y-4 lg:pt-48 pt-40">
+    <div className="items-center lg:w-130 md:w-130 md:items-start lg:items-start flex flex-col gap-y-4 lg:pt-34 md:pt-26 pt-26">
       <div className="w-full lg:h-47 h-38 z-0 absolute left-0 top-15">
         {isCoverImageLoading && (
           <div
@@ -74,7 +74,7 @@ function Profile() {
         />
       </div>
 
-      <div className="text-center w-full lg:pr-20 md:pr-20 lg:text-left md:bg-neutral-100 lg:bg-neutral-100 rounded-xl p-5">
+      <div className="text-center w-full lg:pr-20 md:pr-20 lg:text-left rounded-xl p-5">
         <h1 className="font-bold md:text-left text-2xl mb-1 lg:mb-3 text-neutral-800">
           Jorence Mendoza
         </h1>
@@ -99,13 +99,13 @@ function Profile() {
 
         <div className="flex items-center flex-col lg:mt-5 gap-3 justify-center">
           {/* Use the reusable CvButton component */}
-          <CvButton onClick={handleResumeClick} text="CV" />
+          <CvButton onClick={handleResumeClick} text="Resume" />
           {showModal && (
             <ResumeDL onAccept={handleAccept} onDecline={handleDecline} />
           )}
           <a
             href="mailto:jorencemendoza2@gmail.com?subject=Contact%20from%20Website"
-            className="bg-blue-100 text-center text-blue-700 cursor-pointer hover:bg-blue-200 w-1/2 py-2 md:w-full lg:w-full text-sm rounded-2xl font-medium"
+            className="bg-blue-100 text-center text-blue-700 cursor-pointer hover:bg-blue-200 py-2 w-full text-sm rounded-2xl font-medium"
           >
             Email
           </a>

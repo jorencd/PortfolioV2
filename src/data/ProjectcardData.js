@@ -19,9 +19,9 @@ export const projects = [
     url: "https://qc-system.vercel.app/",
     description:
       "Sanhs is a comprehensive quality control system designed for manufacturing processes. It allows real-time monitoring of production lines, with detailed analytics and automated reports to optimize decision-making. The system helps businesses ensure product quality through rigorous checks and continuous improvement. The dashboard provides intuitive insights into production data, making it easier to identify bottlenecks and inefficiencies. Designed to integrate with various production systems, it ensures smoother workflow and better overall quality control.",
-    technologies: ["React", "Node.js", "apollo-client", "GraphQL"],
+    technologies: ["React", "styled-components", "GraphQL"],
     tools: ["HygraphCMS", "Figma", "Vercel"],
-    icon: ["material-icon-theme:react", "material-icon-theme:nodejs"],
+    icon: ["material-icon-theme:react", "skill-icons:graphql-light"],
   },
   {
     images: [interlux3, interlux1, interlux2],
@@ -29,7 +29,7 @@ export const projects = [
     url: "https://interllux.vercel.app/",
     description:
       "This e-commerce platform is built to provide a modern and user-friendly online shopping experience. The website features a robust product catalog, a secure shopping cart, and an easy-to-use checkout process. It allows users to browse and purchase products while providing store owners with the tools to manage their inventory and orders. The platform integrates secure payment gateways for smooth transactions and customer data protection. It is designed with scalability in mind, able to handle large volumes of traffic and data as the business grows.",
-    technologies: ["React", "CSS", "MySQL"],
+    technologies: ["PHP", "Bootstrap", "MySQL"],
     tools: ["Supabase", "Vercel", "Figma"],
     icon: ["material-icon-theme:react", "skill-icons:css"],
   },

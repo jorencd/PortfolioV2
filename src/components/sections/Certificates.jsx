@@ -73,7 +73,7 @@ function Certificates() {
 
       <div className="lg:mt-15 md:mt-15 text-center w-full lg:w-75 md:w-75 lg:text-left rounded-xl p-5">
         {/* Use the reusable CvButton component here */}
-        <CvButton text="CV" onClick={handleResumeClick}  className="mt-14 lg:mt-0 md:mt-0 w-full rounded-full font-semibold text-white py-1 lg:mb-5 md:mb-5" />
+        <CvButton text="Resume" onClick={handleResumeClick}  className="mt-14 lg:mt-0 md:mt-0 w-full rounded-full font-semibold text-white py-1 lg:mb-5 md:mb-5" />
         
         {showModal && (
             <ResumeDL onAccept={handleAccept} onDecline={handleDecline} />

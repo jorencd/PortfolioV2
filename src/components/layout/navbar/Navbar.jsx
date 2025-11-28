@@ -1,14 +1,19 @@
+// Navbar.jsx
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import MyLogo from "../../../assets/images/logo/mylogo.png";
 import useMobileCheck from "../../../hooks/useNav";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const isMobile = useMobileCheck(); 
+  const isMobile = useMobileCheck();
+  const location = useLocation(); // Get current route
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+
+  // Helper function to check if link is active
+  const isActiveLink = (path) => location.pathname === path;
 
   return (
     <div className="relative text-neutral-800">
@@ -22,19 +27,59 @@ const Navbar = () => {
             />
           )}
           <div className={`${isMobile ? "ml-auto" : ""}`}>
-            <img src={MyLogo} alt="Logo" className="h-10" />
+            <Link to="/">
+              <img src={MyLogo} alt="Logo" className="h-10" />
+            </Link>
           </div>
 
           {!isMobile && (
             <ul className="flex space-x-8 font-semibold">
               <li className="cursor-pointer">
-                <Link to="/" className="cursor-pointer">Home</Link>
+                <Link
+                  to="/"
+                  className={`cursor-pointer ${
+                    isActiveLink("/") ? "text-blue-600" : "text-neutral-800"
+                  }`}
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/certificates" className="cursor-pointer">Certificates</Link>
+                <Link
+                  to="/certificates"
+                  className={`cursor-pointer ${
+                    isActiveLink("/certificates")
+                      ? "text-blue-600"
+                      : "text-neutral-800"
+                  }`}
+                >
+                  Certificates
+                </Link>
               </li>
-              <li className="cursor-pointer">Contact</li>
-              <li className="cursor-pointer">Project</li>
+              <li className="cursor-pointer">
+                <Link
+                  to="/works"
+                  className={`cursor-pointer ${
+                    isActiveLink("/works")
+                      ? "text-blue-600"
+                      : "text-neutral-800"
+                  }`}
+                >
+                  Work
+                </Link>
+              </li>
+              <li className="cursor-pointer">
+                <Link
+                  to="/projects"
+                  className={`cursor-pointer ${
+                    isActiveLink("/projects")
+                      ? "text-blue-600"
+                      : "text-neutral-800"
+                  }`}
+                >
+                  Projects
+                </Link>
+              </li>
             </ul>
           )}
         </div>
@@ -50,6 +95,9 @@ const Navbar = () => {
           sidebarOpen ? "w-3/5 lg:w-1/5" : "w-0"
         } overflow-hidden z-50`}
       >
+        <div className="md:hidden lg:hidden block ml-4 mt-4 text-sm font-semibold">
+          Jorence Mendoza
+        </div>
         <div className="absolute top-4 right-4 z-30">
           <Icon
             icon="mdi:close"
@@ -57,23 +105,69 @@ const Navbar = () => {
             className="text-black text-xl cursor-pointer"
           />
         </div>
-        <ul className="p-4">
+        <ul className="p-4 mt-8 text-sm font-semibold">
           <li className="mb-4">
-            <Link to="/" className="cursor-pointer">Home</Link>
+            <Link
+              to="/"
+              className={`cursor-pointer block py-2 ${
+                isActiveLink("/")
+                  ? "text-blue-600 font-semibold"
+                  : "text-neutral-800"
+              }`}
+              onClick={toggleSidebar}
+            >
+              Home
+            </Link>
           </li>
           <li className="mb-4">
-            <Link to="/certificates" className="cursor-pointer">Certificates</Link>
+            <Link
+              to="/certificates"
+              className={`cursor-pointer block py-2 ${
+                isActiveLink("/certificates")
+                  ? "text-blue-600 font-semibold"
+                  : "text-neutral-800"
+              }`}
+              onClick={toggleSidebar}
+            >
+              Certificates
+            </Link>
           </li>
-          <li className="mb-4">Contact</li>
-          <li className="mb-4">Project</li>
+          <li className="mb-4">
+            <Link
+                  to="/works"
+                  className={`cursor-pointer ${
+                    isActiveLink("/works")
+                      ? "text-blue-600"
+                      : "text-neutral-800"
+                  }`}
+                >
+                  Works
+                </Link>
+          </li>
+          <li className="mb-4">
+            <Link
+                  to="/projects"
+                  className={`cursor-pointer ${
+                    isActiveLink("/projects")
+                      ? "text-blue-600"
+                      : "text-neutral-800"
+                  }`}
+                >
+                  Projects
+                </Link>
+          </li>
         </ul>
+        <div className="h-full">
+          <p className="text-sm text-center px-2 text-neutral-500 absolute bottom-4 left-0">
+            Copyright © {new Date().getFullYear()} - All right reserved by Jorence Mendoza
+          </p>
+        </div>
       </div>
       <div
         className={`transition-all duration-300 ${
           sidebarOpen ? "ml-3/5 lg:ml-4/5" : ""
         }`}
-      >
-      </div>
+      ></div>
     </div>
   );
 };

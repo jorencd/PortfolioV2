@@ -63,7 +63,7 @@ function Contact() {
   };
 
   return (
-    <div className="mb-15 mt-10 bg-[#f1efef] rounded-xl" id="contact">
+    <div className="mb-15 mt-10 bg-[#ffffff] rounded-xl" id="contact">
       <div className="max-w-5xl px-4 py-10 mx-auto lg:py-20 lg:px-10 md:px-10">
         <div className="max-w-3xl mb-10 lg:mb-14">
           <h2 className="text-neutral-700 text-2xl font-semibold md:text-4xl md:leading-tight">
@@ -227,7 +227,7 @@ function Contact() {
                     id="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 not-placeholder-shown:pt-6 not-placeholder-shown:pb-2 autofill:pt-6 autofill:pb-2 bg-neutral-300 text-neutral-800"
+                    className="peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 not-placeholder-shown:pt-6 not-placeholder-shown:pb-2 autofill:pt-6 autofill:pb-2 bg-neutral-100 text-neutral-800"
                     placeholder="Name"
                   />
                   <label
@@ -246,7 +246,7 @@ function Contact() {
                     id="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 not-placeholder-shown:pt-6 not-placeholder-shown:pb-2 autofill:pt-6 autofill:pb-2 bg-neutral-300 text-neutral-900"
+                    className="peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 not-placeholder-shown:pt-6 not-placeholder-shown:pb-2 autofill:pt-6 autofill:pb-2 bg-neutral-100 text-neutral-900"
                     placeholder="Email"
                   />
                   <label
@@ -264,7 +264,7 @@ function Contact() {
                     id="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 not-placeholder-shown:pt-6 not-placeholder-shown:pb-2 autofill:pt-6 autofill:pb-2 bg-neutral-300 text-neutral-900"
+                    className="peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 not-placeholder-shown:pt-6 not-placeholder-shown:pb-2 autofill:pt-6 autofill:pb-2 bg-neutral-100 text-neutral-900"
                     placeholder="Message"
                   ></textarea>
                   <label
@@ -284,7 +284,7 @@ function Contact() {
                 <p className="mt-5">
                   <button
                     type="submit"
-                    className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#E3B555] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden"
+                    className="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 font-medium text-sm text-white rounded-full focus:outline-hidden"
                   >
                     Submit
                     <svg

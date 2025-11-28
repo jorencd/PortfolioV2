@@ -4,7 +4,6 @@ import { ClipLoader } from 'react-spinners';
 import LoadingFallback from '../../components/common/loadingfallback/LoadingFallback';  
 
 const Profile = React.lazy(() => import('../../components/sections/Profile'));
-const Navbar = React.lazy(() => import('../../components/layout/navbar/Navbar'));
 const Project = React.lazy(() => import('../../components/sections/Project'));
 const Contact = React.lazy(() => import('../../components/sections/Contact'));
 const Footer = React.lazy(() => import('../../components/layout/footer/Footer'));
@@ -71,10 +70,8 @@ function Home() {
   }
 
   return (
-    <div className="lg:px-15 md:px-15 px-5 bg-white">
-      <Suspense fallback={<LoadingFallback isSlowNetwork={isSlowNetwork} />}>
-        <Navbar />
-      </Suspense>
+    <div className="lg:px-15 md:px-15 px-5 bg-white pt-16"> {/* Added pt-16 for navbar spacing */}
+      {/* Navbar removed from here */}
 
       <div className="flex flex-col md:flex-row lg:flex-row gap-x-5">
         <Suspense fallback={<LoadingFallback isSlowNetwork={isSlowNetwork} />}>

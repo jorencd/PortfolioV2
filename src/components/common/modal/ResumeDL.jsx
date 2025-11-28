@@ -11,13 +11,13 @@ function ResumeDL({ onAccept, onDecline }) {
             </p>
             <div className="flex justify-end gap-3 mt-4 text-sm">
             <button
-                className="px-5 py-2 rounded-full bg-gray-300 hover:bg-gray-400 text-[#1f1f1f] transition"
+                className="px-5 py-2 cursor-pointer rounded-full bg-gray-300 hover:bg-gray-400 text-[#1f1f1f] transition"
                 onClick={onDecline}
             >
                 Decline
             </button>
             <button
-                className="px-5 py-2 rounded-full bg-neutral-900 text-white hover:bg-[#eec875] transition"
+                className="px-5 py-2 cursor-pointer rounded-full bg-neutral-900 text-white hover:bg-neutral-700 transition"
                 onClick={onAccept}
             >
                 Accept

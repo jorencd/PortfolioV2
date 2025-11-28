@@ -28,8 +28,8 @@ function Project() {
   };
 
   return (
-    <div className="w-full text-sm mb-6">
-      <div className="flex md:pt-65 lg:pt-75 rounded border-b border-neutral-200">
+    <div className="w-full text-sm">
+      <div className="flex md:pt-55 lg:pt-63 rounded border-b border-neutral-200">
         <ul className="flex font-medium gap-x-5 md:pt-5 lg:pt-5">
           <li
             className={`cursor-pointer w-full text-center p-2 ${
@@ -59,7 +59,7 @@ function Project() {
             }`}
             onClick={() => handleClick(2)}
           >
-            Services
+            Service
           </li>
           <li
             className={`cursor-pointer text-center p-2 md:hidden lg:hidden ${
@@ -76,7 +76,7 @@ function Project() {
 
       <div className="items-center w-full md:mt-3 lg:mt-3">
         {selected === 0 && (
-          <div className="mt-18 lg:mt-5 md:mt-5 grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
+          <div className="mt-7 lg:mt-5 md:mt-5 grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -105,7 +105,7 @@ function Project() {
         )}
 
         {selected === 3 && (
-          <div className="block mt-5 md:hidden lg:hidden">
+          <div className="block mt-5 md:hidden lg:hidden" >
             <About />
           </div>
         )}
