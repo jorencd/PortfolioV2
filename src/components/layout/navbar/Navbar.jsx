@@ -33,7 +33,7 @@ const Navbar = () => {
           </div>
 
           {!isMobile && (
-            <ul className="flex space-x-8 font-semibold">
+            <ul className="flex space-x-8 font-semibold mr-3">
               <li className="cursor-pointer">
                 <Link
                   to="/"
@@ -65,19 +65,7 @@ const Navbar = () => {
                       : "text-neutral-800"
                   }`}
                 >
-                  Work
-                </Link>
-              </li>
-              <li className="cursor-pointer">
-                <Link
-                  to="/projects"
-                  className={`cursor-pointer ${
-                    isActiveLink("/projects")
-                      ? "text-blue-600"
-                      : "text-neutral-800"
-                  }`}
-                >
-                  Projects
+                  Works
                 </Link>
               </li>
             </ul>
@@ -142,18 +130,6 @@ const Navbar = () => {
                   }`}
                 >
                   Works
-                </Link>
-          </li>
-          <li className="mb-4">
-            <Link
-                  to="/projects"
-                  className={`cursor-pointer ${
-                    isActiveLink("/projects")
-                      ? "text-blue-600"
-                      : "text-neutral-800"
-                  }`}
-                >
-                  Projects
                 </Link>
           </li>
         </ul>

@@ -12,6 +12,11 @@ import portfolio2 from "../assets/images/projectphoto/portfolio2.webp";
 import hotel1 from "../assets/images/projectphoto/hotel1.png";
 import hotel2 from "../assets/images/projectphoto/hotel2.png";
 
+import sanhs from "../assets/images/WorkaPhoto/sanhsweb.png";
+import sanhsabout from "../assets/images/projectphoto/sanhsAbout.png";
+import sanhsblog from "../assets/images/projectphoto/sanhsBlog.png";
+import sanhsfooter from "../assets/images/projectphoto/sanhsFooter.png";
+
 export const projects = [
   {
     images: [sanhs1, sanhs2, sanhs3],
@@ -55,5 +60,15 @@ export const projects = [
       "material-icon-theme:php-elephant",
       "material-icon-theme:javascript",
     ],
+  },
+  {
+    images: [sanhs, sanhsabout, sanhsblog, sanhsfooter],
+    title: "Sanhs Website",
+    url: "https://sanhs-website.vercel.app/",
+    description:
+      "Welcome to our school’s official website! Built with React JS and Styled Components, our site offers a seamless and interactive experience, providing easy access to important information, news, and resources for students, faculty, and visitors. Whether you're looking for school updates, event schedules, or course details, our user-friendly interface ensures that all content is accessible at your fingertips. Stay informed and connected with our vibrant academic community through our dynamic, responsive, and beautifully designed platform.",
+    technologies: ["ReactJs", "Styled Components"],
+    tools: ["Git", "Hygraph", "Figma", "Vercel", "Ant Design"],
+    icon: ["material-icon-theme:react", "material-icon-theme:javascript"],
   },
 ];

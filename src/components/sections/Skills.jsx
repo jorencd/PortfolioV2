@@ -11,7 +11,6 @@ function Skills() {
   ];
 
   const backEndTech = [
-    { svg: <Icon icon="skill-icons:nodejs-dark" width="30" height="30" />, text: "Node.js" },
     { svg: <Icon icon="material-icon-theme:php" width="30" height="30" />, text: "PHP" },
     { svg: <Icon icon="skill-icons:mysql-dark" width="30" height="30" />, text: "MySQL" },
     { svg: <Icon icon="skill-icons:postgresql-dark" width="30" height="30" />, text: "Postgre" },
