@@ -83,7 +83,7 @@ const Navbar = () => {
           sidebarOpen ? "w-3/5 lg:w-1/5" : "w-0"
         } overflow-hidden z-50`}
       >
-        <div className="md:hidden lg:hidden block ml-4 mt-4 text-sm font-semibold">
+        <div className="md:hidden lg:hidden block ml-4 mt-4 text-base font-semibold">
           Jorence Mendoza
         </div>
         <div className="absolute top-4 right-4 z-30">
@@ -93,7 +93,7 @@ const Navbar = () => {
             className="text-black text-xl cursor-pointer"
           />
         </div>
-        <ul className="p-4 mt-8 text-sm font-semibold">
+        <ul className="p-4 mt-8 text-base font-semibold">
           <li className="mb-4">
             <Link
               to="/"
@@ -123,7 +123,7 @@ const Navbar = () => {
           <li className="mb-4">
             <Link
                   to="/works"
-                  className={`cursor-pointer ${
+                  className={`cursor-pointer block py-2 ${
                     isActiveLink("/works")
                       ? "text-blue-600"
                       : "text-neutral-800"
