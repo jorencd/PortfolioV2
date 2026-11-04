@@ -48,8 +48,8 @@ function Certificates() {
   const handleAccept = () => {
     setShowModal(false);
     const link = document.createElement("a");
-    link.href = "/Resume/Jorence_Mendoza_Resume.pdf";
-    link.download = "Jorence_Mendoza_Resume.pdf";
+    link.href = "/Resume/Jorence-Resume.pdf";
+    link.download = "Jorence-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

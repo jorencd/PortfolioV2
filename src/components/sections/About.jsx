@@ -15,7 +15,11 @@ function About() {
                 <Icon icon="ic:baseline-facebook" className="size-5" />
                 Facebook
               </div>
-              <a href="https://www.facebook.com/jorence.mendoza.2024" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/jorence.mendoza.2024"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Icon
                   icon="akar-icons:link-out"
                   className="size-5 text-neutral-400 cursor-pointer"
@@ -27,11 +31,15 @@ function About() {
                 <Icon icon="mdi:linkedin" className="size-5" />
                 LinkedIn
               </div>
-              <a href="http://www.linkedin.com/in/"  target="_blank" rel="noopener noreferrer">
-              <Icon
-                icon="akar-icons:link-out"
-                className="size-5 text-neutral-400 cursor-pointer"
-              />
+              <a
+                href="http://www.linkedin.com/in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon="akar-icons:link-out"
+                  className="size-5 text-neutral-400 cursor-pointer"
+                />
               </a>
             </li>
             <li className="border-b border-neutral-200 p-3 flex justify-between">
@@ -39,11 +47,15 @@ function About() {
                 <Icon icon="mdi:github" className="size-5" />
                 GitHub
               </div>
-              <a href="https://github.com/ratty-debug" target="_blank" rel="noopener noreferrer">
-              <Icon
-                icon="akar-icons:link-out"
-                className="size-5 text-neutral-400 cursor-pointer"
-              />
+              <a
+                href="https://github.com/ratty-debug"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon="akar-icons:link-out"
+                  className="size-5 text-neutral-400 cursor-pointer"
+                />
               </a>
             </li>
           </ul>
@@ -54,9 +66,13 @@ function About() {
           ABOUT ME
         </p>
         <p className="text-neutral-900 text-left text-sm mt-1 md:block lg:block w-full">
-          a BSIT graduate majoring in Web and Game Development. I’m passionate
-          about creating interactive experiences, whether it’s building
-          websites, developing games, or exploring digital art.
+          <span className="font-bold text-[#2e2e2e]">Designing pixels. Building products. Bringing ideas to life.</span>
+          <br></br>
+          I'm a web designer and developer shaping interfaces in Figma and bringing them
+          to life with React, JavaScript, Tailwind CSS, and Styled Components. I
+          live at the intersection of design and code. Design is my strongest
+          instinct, but I'm just as comfortable shipping front-end and back-end
+          work to get a product across the finish line.
         </p>
       </div>
     </div>

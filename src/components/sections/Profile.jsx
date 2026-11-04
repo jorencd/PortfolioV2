@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
-import mypicture from "../../assets/images/profile/mypicture.png";
+import mypicture from "../../assets/images/profile/mypicute.jpg";
 import coverphoto from "../../assets/images/coverphoto/banner2.svg";
 import ResumeDL from "../common/modal/ResumeDL";
 import About from "./About";
@@ -31,8 +31,8 @@ function Profile() {
   const handleAccept = () => {
     setShowModal(false);
     const link = document.createElement("a");
-    link.href = "/Resume/Jorence_Mendoza_Resume.pdf";
-    link.download = "Jorence_Mendoza_Resume.pdf";
+    link.href = "/Resume/Jorence-Resume.pdf";
+    link.download = "Jorence-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -68,7 +68,7 @@ function Profile() {
         <img
           src={mypicture}
           alt="Jorence"
-          className="object-cover rounded-full"
+          className="w-full h-full object-cover rounded-full"
           loading="eager"
           onLoad={() => handleImageLoad("profile")}
         />
@@ -85,7 +85,7 @@ function Profile() {
           </p>
           <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon icon="grommet-icons:user-expert" className="size-3 text-neutral-500" />
-            Web & Game Developer
+            Web & Game Developer | Web Designer
           </p>
           <p className="flex gap-x-1 justify-center md:justify-start lg:justify-start items-center">
             <Icon icon="mdi:contact" className="size-3 text-neutral-500" />

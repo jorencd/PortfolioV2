@@ -1,25 +1,45 @@
 import sanhs1 from "../assets/images/projectphoto/login.webp";
-import sanhs2 from "../assets/images/projectphoto/dashboard.webp";
-import sanhs3 from "../assets/images/projectphoto/table.webp";
+import sanhs2 from "../assets/images/projectphoto/admin_dashboard.webp";
+import sanhs3 from "../assets/images/projectphoto/edit.webp";
+import sanhs4 from "../assets/images/projectphoto/user_dashboard.webp";
 
-import interlux1 from "../assets/images/projectphoto/interlogin.webp";
-import interlux2 from "../assets/images/projectphoto/landing.webp";
-import interlux3 from "../assets/images/projectphoto/product.webp";
+import port0 from "../assets/images/projectphoto/port0.png";
+import port1 from "../assets/images/projectphoto/port1.png";
+import port2 from "../assets/images/projectphoto/port2.png";
+import port3 from "../assets/images/projectphoto/port3.png";
+import port4 from "../assets/images/projectphoto/port4.png";
+import port5 from "../assets/images/projectphoto/port5.png";
 
 import portfolio1 from "../assets/images/projectphoto/portfolio1.webp";
 import portfolio2 from "../assets/images/projectphoto/portfolio2.webp";
 
-import hotel1 from "../assets/images/projectphoto/hotel1.png";
-import hotel2 from "../assets/images/projectphoto/hotel2.png";
+import ip0 from "../assets/images/projectphoto/ip0.png";
+import ip1 from "../assets/images/projectphoto/ip1.png";
+import ip2 from "../assets/images/projectphoto/ip2.png";
+import ip3 from "../assets/images/projectphoto/ip3.png";
+import ip4 from "../assets/images/projectphoto/ip4.png";
+import ip5 from "../assets/images/projectphoto/ip5.png";
 
-import sanhs from "../assets/images/WorkaPhoto/sanhsweb.png";
-import sanhsabout from "../assets/images/projectphoto/sanhsAbout.png";
-import sanhsblog from "../assets/images/projectphoto/sanhsBlog.png";
-import sanhsfooter from "../assets/images/projectphoto/sanhsFooter.png";
+import school1 from "../assets/images/projectphoto/school1.jpg";
+import school2 from "../assets/images/projectphoto/school2.webp";
+import school3 from "../assets/images/projectphoto/school3.webp";
+import school4 from "../assets/images/projectphoto/school4.webp";
+import school5 from "../assets/images/projectphoto/school5.webp";
+
+import landing1 from "../assets/images/projectphoto/landing1.png";
+import landing2 from "../assets/images/projectphoto/landing2.png";
+import landing3 from "../assets/images/projectphoto/landing3.png";
+import landing4 from "../assets/images/projectphoto/landing4.png";
+
+import LibraryLogin from "../assets/images/projectphoto/LibraryLogin.png";
+import LibraryDash from "../assets/images/projectphoto/LibraryDash.png";
+import LibraryAddbook from "../assets/images/projectphoto/LibraryAddbook.png";
+import LibraryBooklist from "../assets/images/projectphoto/LibraryBooklist.png";
+import LibraryReport from "../assets/images/projectphoto/LibraryReport.png";
 
 export const projects = [
   {
-    images: [sanhs1, sanhs2, sanhs3],
+    images: [sanhs1, sanhs2, sanhs3, sanhs4],
     title: "Sanhs - Quality Control System",
     url: "https://qc-system.vercel.app/",
     description:
@@ -29,14 +49,14 @@ export const projects = [
     icon: ["material-icon-theme:react", "skill-icons:graphql-light"],
   },
   {
-    images: [interlux3, interlux1, interlux2],
-    title: "E-Commerce Website",
-    url: "https://interllux.vercel.app/",
+    images: [port0, port1, port2, port3, port4, port5],
+    title: "Portfolio Design",
+    url: "https://www.figma.com/proto/kYFbrp0SKrINwGdGunx7wN/Untitled?node-id=79-3&t=aGDAXr4pRgDUAexY-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
     description:
-      "This e-commerce platform is built to provide a modern and user-friendly online shopping experience. The website features a robust product catalog, a secure shopping cart, and an easy-to-use checkout process. It allows users to browse and purchase products while providing store owners with the tools to manage their inventory and orders. The platform integrates secure payment gateways for smooth transactions and customer data protection. It is designed with scalability in mind, able to handle large volumes of traffic and data as the business grows.",
-    technologies: ["PHP", "Bootstrap", "MySQL"],
-    tools: ["Supabase", "Vercel", "Figma"],
-    icon: ["material-icon-theme:react", "skill-icons:css"],
+      "This Figma project showcases a modern and user-friendly UI/UX design focused on creating a smooth and engaging digital experience. The design includes carefully structured layouts, intuitive navigation, consistent visual elements, and interactive prototypes that demonstrate the overall user flow. The project was created in Figma to explore interface design, usability, responsive layouts, and user-centered design principles.",
+    technologies: ["UI/UX Design", "Prototyping", "Wireframing"],
+    tools: ["Figma"],
+    icon: ["material-icon-theme:figma", "material-symbols:design-services"],
   },
   {
     images: [portfolio1, portfolio2],
@@ -49,26 +69,49 @@ export const projects = [
     icon: ["material-icon-theme:react", "logos:tailwindcss-icon"],
   },
   {
-    images: [hotel1, hotel2],
-    title: "Hotel Booking Website",
-    url: "https://example.com/hotel",
+    images: [ip0, ip1, ip2, ip3, ip4, ip5],
+    title: "iWatch Website Design",
+    url: "https://www.figma.com/proto/kYFbrp0SKrINwGdGunx7wN/Untitled?node-id=79-4&p=f&t=Sk72W1FVIcC0qa5h-1&scaling=contain&content-scaling=fixed&page-id=0%3A1",
     description:
-      "The hotel booking system is designed to offer a seamless reservation experience for users. Customers can search for available rooms, select their preferred accommodations, and make secure bookings. The platform integrates with payment gateways for smooth transactions and sends confirmation details to users via email. Additionally, hotel management can easily track room availability, bookings, and customer details. The system is built to scale, ensuring it can handle high traffic during peak times while maintaining an efficient and secure user experience.",
-    technologies: ["PHP", "JavaScript", "MySQL"],
-    tools: ["Git", "Supabase", "Figma"],
-    icon: [
-      "material-icon-theme:php-elephant",
-      "material-icon-theme:javascript",
-    ],
+      "This project is a modern iWatch website design created in Figma, focusing on a clean, premium, and user-friendly interface. The design showcases the iWatch product through visually engaging layouts, product sections, intuitive navigation, and interactive elements. The project explores UI/UX design principles, responsive layouts, typography, visual hierarchy, and prototyping to create a smooth and engaging product browsing experience.",
+    technologies: ["UI/UX Design", "Web Design", "Prototyping"],
+    tools: ["Figma"],
+    icon: ["material-icon-theme:figma", "material-symbols:design-services"],
   },
   {
-    images: [sanhs, sanhsabout, sanhsblog, sanhsfooter],
-    title: "Sanhs Website",
-    url: "https://sanhs-website.vercel.app/",
+    images: [school1, school2, school3, school4, school5],
+    title: "School Website",
+    url: "https://sanhs301385-edu.vercel.app/",
     description:
       "Welcome to our school’s official website! Built with React JS and Styled Components, our site offers a seamless and interactive experience, providing easy access to important information, news, and resources for students, faculty, and visitors. Whether you're looking for school updates, event schedules, or course details, our user-friendly interface ensures that all content is accessible at your fingertips. Stay informed and connected with our vibrant academic community through our dynamic, responsive, and beautifully designed platform.",
     technologies: ["ReactJs", "Styled Components"],
     tools: ["Git", "Hygraph", "Figma", "Vercel", "Ant Design"],
     icon: ["material-icon-theme:react", "material-icon-theme:javascript"],
+  },
+  {
+    images: [landing1, landing2, landing3, landing4],
+    title: "Figma Designs",
+    url: "https://www.figma.com/design/ap9LbWC3hTq655JK8WVLeR/Untitled?t=D2pyjYRnMUKCzJTC-1",
+    description:
+      "A collection of Figma designs showcasing my UI/UX skills. These designs include various interfaces and user experiences, demonstrating a keen eye for detail and a user-centered approach.",
+    technologies: ["Figma"],
+    tools: ["Figma"],
+    icon: ["material-icon-theme:figma"],
+  },
+  {
+    images: [
+      LibraryLogin,
+      LibraryDash,
+      LibraryAddbook,
+      LibraryBooklist,
+      LibraryReport,
+    ],
+    title: "Library Management System",
+    url: "https://emiso-admin.vercel.app/",
+    description:
+      "A digital library platform built for Pamantasan ng Lungsod ng San Pablo, developed solo during my internship. Students log in with their Student ID to browse and search the book collection, filter by category, and read academic journals, all from a clean, responsive interface. Librarians and administrators get a separate admin panel with a dashboard showing total students, books, journals, and daily logins, plus a weekly reader activity chart. Admins can add books by uploading a PDF and an optional cover image, organize them by category, and track student logins by date through a reports page with CSV export. I handled everything from UI design to front-end development, with a layout that keeps the platform easy to use for students and staff alike.",
+    technologies: ["ReactJs", "NodeJs", "TailwindCSS"],
+    tools: ["Git", "Figma", "Vercel", "TailwindCSS"],
+    icon: ["material-icon-theme:react", "material-icon-theme:tailwindcss"],
   },
 ];

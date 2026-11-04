@@ -18,7 +18,7 @@ const ProjectCard = ({ image, title, onClick }) => {
   };
 
   return (
-    <div className="relative w-full group cursor-pointer" onClick={onClick}>
+    <div className="relative w-full group cursor-pointer shadow-xl h-50" onClick={onClick}>
       {!isImageLoaded && <SkeletonLoader />}
 
       <img

@@ -56,18 +56,6 @@ const Navbar = () => {
                   Certificates
                 </Link>
               </li>
-              <li className="cursor-pointer">
-                <Link
-                  to="/works"
-                  className={`cursor-pointer ${
-                    isActiveLink("/works")
-                      ? "text-blue-600"
-                      : "text-neutral-800"
-                  }`}
-                >
-                  Works
-                </Link>
-              </li>
             </ul>
           )}
         </div>
@@ -119,18 +107,6 @@ const Navbar = () => {
             >
               Certificates
             </Link>
-          </li>
-          <li className="mb-4">
-            <Link
-                  to="/works"
-                  className={`cursor-pointer block py-2 ${
-                    isActiveLink("/works")
-                      ? "text-blue-600"
-                      : "text-neutral-800"
-                  }`}
-                >
-                  Works
-                </Link>
           </li>
         </ul>
         <div className="h-full">
